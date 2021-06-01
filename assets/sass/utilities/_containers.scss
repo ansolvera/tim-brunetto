@@ -1,8 +1,16 @@
+// ********************
+//  CONTAINERS
+// ********************
+
 .container {
     margin: 0 auto;
     width: 90%;
     max-width: 73.125rem;
 }
+
+// ********************
+//  SECTIONS
+// ********************
 
 .section {
     position: relative;
@@ -17,6 +25,52 @@
 
     &.py-160 {
         padding: 10rem 0;
+    }
+
+}
+
+// ********************
+//  FLEX
+// ********************
+
+// FLEX ROWS
+.flex-row {
+
+    &.start {
+        @include flexRow(flex-start, center);
+    }
+
+    &.center {
+        @include flexRow(center, center);
+    }
+
+    &.end {
+        @include flexRow(flex-end, center);
+    }
+
+    &.between {
+        @include flexRow(space-between, center);
+    }
+
+}
+
+// FLEX COLUMNS
+.flex-col {
+
+    &.start {
+        @include flexColumn(center, flex-start);
+    }
+
+    &.center {
+        @include flexColumn(center, center);
+    }
+
+    &.end {
+        @include flexColumn(flex-end, center);
+    }
+
+    &.between {
+        @include flexColumn(center, space-between);
     }
 
 }

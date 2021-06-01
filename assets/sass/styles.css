@@ -10,6 +10,34 @@
   }
 }
 
+.mx-auto {
+  margin: 0 auto;
+}
+
+.mr-16 {
+  margin-right: 1rem;
+}
+
+.mb-10 {
+  margin-bottom: 0.625rem;
+}
+
+.mb-20 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-40 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-80 {
+  margin-bottom: 5rem;
+}
+
+.mb-120 {
+  margin-bottom: 7.5rem;
+}
+
 @font-face {
   font-family: "Agency FB";
   src: url("../static/fonts/agencyr.ttf") format("truetype");
@@ -24,60 +52,6 @@ main {
   margin-top: -3.75rem;
 }
 
-.mx-auto {
-  margin: 0 auto;
-}
-
-.flex-row.start {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-.flex-row.center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.flex-row.end {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-}
-.flex-row.between {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.flex-col.start {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.flex-col.center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.flex-col.end {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-}
-.flex-col.between {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: space-between;
-}
-
 a {
   transition: color 300ms ease-in-out;
 }
@@ -85,12 +59,20 @@ a:hover {
   color: #3176AA;
 }
 
-.mr-16 {
-  margin-right: 1rem;
-}
-
 .shadow-xl {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.h-full {
+  height: 100%;
+}
+
+.content-between {
+  align-content: space-between;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /*! tailwindcss v2.1.1 | MIT License | https://tailwindcss.com */
@@ -652,22 +634,39 @@ body {
 #hero {
   height: 67.5rem;
   background-image: url("/img/forest-placeholder.jpg");
-  background-color: #181818;
+  background-color: #333;
   background-repeat: no-repeat;
   background-position: center;
 }
-
-.hero__discord {
-  padding: 5rem;
-  max-width: 25rem;
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+#hero .flex-col {
+  align-items: normal;
 }
-.hero__discord .logo {
+
+.hero__discord, .hero__fop {
+  width: 25rem;
+  background-color: #181818;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3.75rem 2.5rem;
+  border-radius: 0.5rem;
+}
+.hero__discord .logo, .hero__fop .logo {
   width: 5rem;
+}
+
+.features__left, .features__right, .features__image {
+  width: 50%;
+}
+
+.features__left {
+  padding-right: 2rem;
+}
+
+.features__right {
+  padding-left: 2rem;
 }
 
 header {
@@ -714,6 +713,56 @@ header {
 }
 .section.py-160 {
   padding: 10rem 0;
+}
+
+.flex-row.start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-row.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flex-row.end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.flex-row.between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-col.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.flex-col.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-col.end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.flex-col.between {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
 }
 
 /*# sourceMappingURL=styles.css.map */

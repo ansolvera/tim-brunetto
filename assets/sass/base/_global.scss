@@ -7,54 +7,6 @@ main {
     margin-top: -3.75rem;
 }
 
-// ********************
-// UTILITY CLASSES
-// ********************
-
-.mx-auto {
-    margin: 0 auto;
-}
-
-.flex-row {
-
-    &.start {
-        @include flexRow(flex-start, center);
-    }
-
-    &.center {
-        @include flexRow(center, center);
-    }
-
-    &.end {
-        @include flexRow(flex-end, center);
-    }
-
-    &.between {
-        @include flexRow(space-between, center);
-    }
-
-}
-
-.flex-col {
-
-    &.start {
-        @include flexColumn(center, flex-start);
-    }
-
-    &.center {
-        @include flexColumn(center, center);
-    }
-
-    &.end {
-        @include flexColumn(center, flex-end);
-    }
-
-    &.between {
-        @include flexColumn(center, space-between);
-    }
-
-}
-
 a {
 
     transition: color 300ms ease-in-out;
@@ -65,10 +17,20 @@ a {
 
 }
 
-.mr-16 {
-    margin-right: 1rem;
-}
+
 
 .shadow-xl {
     box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+}
+
+.h-full {
+    height: 100%;
+}
+
+.content-between {
+    align-content: space-between;
+}
+
+.text-center {
+    text-align: center;
 }

@@ -1,19 +1,41 @@
 #hero {
     height: 67.5rem; // 900px
     background-image: url('/img/forest-placeholder.jpg');
-    background-color: $gray-900;
+    background-color: #333;
     background-repeat: no-repeat;
     background-position: center;
+
+    .flex-col {
+        align-items: normal;
+    }
+
 }
 
-.hero__discord {
-    padding: 5rem;
-    max-width: 25rem;
+.hero__discord, .hero__fop {
+    width: 25rem;
+    background-color: $gray-900;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;   
+    padding: 3.75rem 2.5rem;
     border-radius: 0.5rem;
-    @include flexRow(space-between, center);
 
     .logo {
         width: 5rem;
     }
 
+}
+
+.features__left, .features__right, .features__image {
+    width: 50%;
+}
+
+.features__left {
+    padding-right: 2rem;
+}
+
+.features__right {
+    padding-left: 2rem;
 }
