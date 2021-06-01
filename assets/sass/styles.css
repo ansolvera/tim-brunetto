@@ -85,6 +85,14 @@ a:hover {
   color: #3176AA;
 }
 
+.mr-16 {
+  margin-right: 1rem;
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
 /*! tailwindcss v2.1.1 | MIT License | https://tailwindcss.com */
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
@@ -643,13 +651,27 @@ body {
 
 #hero {
   height: 67.5rem;
-  background-image: url("..static/img/forest-placeholder.jpg");
+  background-image: url("/img/forest-placeholder.jpg");
   background-color: #181818;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+.hero__discord {
+  padding: 5rem;
+  max-width: 25rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__discord .logo {
+  width: 5rem;
+}
+
 header {
+  position: relative;
   z-index: 900;
 }
 
