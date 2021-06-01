@@ -1,0 +1,30 @@
+header {
+    z-index: 900;
+}
+
+.navigation {
+    height: 3.75rem;
+    @include flexRow(center, center);
+
+    .logo {
+        margin-left: 1.25rem;
+        height: 2rem;
+    }
+
+    .navigation__brand {
+        flex-shrink: 0;
+    }
+
+    .navigation__hamburger {
+        cursor: pointer;
+    }
+
+    .hamburger {
+        height: 2rem;
+        width: 2rem;
+    }
+
+}
+
+
+

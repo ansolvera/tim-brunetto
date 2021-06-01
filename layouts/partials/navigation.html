@@ -1,0 +1,34 @@
+<header aria-roledescription="header" id="header">
+    <nav class="navigation">
+        <div class="container">
+            <div class="flex-row between">
+                <div class="navigation__left hidden-for-mobile">
+                    <div class="flex-row start">
+                        <p class="text-2xl">Wishlist</p>
+                        <a href="https://epicgames.com/store/en-US/" target="_blank" rel="noopener noreferrer">
+                            <img src="/img/epic-games-logo.svg" alt="Epic Games logo" class="logo">
+                        </a>
+                        <a href="https://humblebundle.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="/img/humble-bundle-logo.svg" alt="Humble Bundle logo" class="logo">
+                        </a>
+                        <a href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="/img/steam-logo.svg" alt="Steam logo" class="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="navigation__brand">
+                    <a href="/" class="text-4xl">Creatures of War</a>
+                </div>
+                <div class="navigation__right hidden-for-mobile">
+                    <a href="#fop" class="text-2xl">Field Operative Program</a>
+                </div>
+                <div class="navigation__hamburger hidden-for-desktop" x-data="{ open: false }" @click="open = true">
+                    <img src="/img/hamburger.svg" alt="Mobile menu icon" class="hamburger">
+                    <div class="navigation__menu" x-show="open" @click.away="open = false">
+                        Hello!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

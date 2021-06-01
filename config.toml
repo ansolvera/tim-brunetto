@@ -1,0 +1,9 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+languageName = "English"
+
+title = "My New Hugo Site"
+
+enableRobotsTXT = true
+canonifyURLs = true
+

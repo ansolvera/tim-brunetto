@@ -1,0 +1,66 @@
+html {
+    background: $gray-900;
+    scroll-behavior: smooth;
+}
+
+main {
+    margin-top: -3.75rem;
+}
+
+// ********************
+// UTILITY CLASSES
+// ********************
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.flex-row {
+
+    &.start {
+        @include flexRow(flex-start, center);
+    }
+
+    &.center {
+        @include flexRow(center, center);
+    }
+
+    &.end {
+        @include flexRow(flex-end, center);
+    }
+
+    &.between {
+        @include flexRow(space-between, center);
+    }
+
+}
+
+.flex-col {
+
+    &.start {
+        @include flexColumn(center, flex-start);
+    }
+
+    &.center {
+        @include flexColumn(center, center);
+    }
+
+    &.end {
+        @include flexColumn(center, flex-end);
+    }
+
+    &.between {
+        @include flexColumn(center, space-between);
+    }
+
+}
+
+a {
+
+    transition: color 300ms ease-in-out;
+
+    &:hover {
+        color: $blue-400;
+    }
+
+}
