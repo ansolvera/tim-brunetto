@@ -643,7 +643,7 @@ body {
 
 #hero {
   height: 67.5rem;
-  background-image: url("/img/forest-placeholder.jpeg");
+  background-image: url("..static/img/forest-placeholder.jpg");
   background-color: #181818;
   background-repeat: no-repeat;
   background-position: center;
@@ -679,6 +679,19 @@ header {
   margin: 0 auto;
   width: 90%;
   max-width: 73.125rem;
+}
+
+.section {
+  position: relative;
+}
+.section.py-80 {
+  padding: 5rem 0;
+}
+.section.py-120 {
+  padding: 7.5rem 0;
+}
+.section.py-160 {
+  padding: 10rem 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
