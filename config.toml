@@ -6,6 +6,3 @@ title = "My New Hugo Site"
 
 enableRobotsTXT = true
 canonifyURLs = true
-
-publishDir = "docs"
-
