@@ -11,8 +11,11 @@
 
 }
 
+#hero, #values, #fop, #wishlist {
+    border-bottom: 1px solid #ffffff;
+} 
+
 .hero__discord, .hero__fop {
-    width: 25rem;
     background-color: $gray-900;
     display: inline-flex;
     flex-direction: row;
@@ -22,20 +25,83 @@
     padding: 3.75rem 2.5rem;
     border-radius: 0.5rem;
 
+    @include breakpointsDown(medium) {
+        width: 100%;
+    }
+
+    @include breakpointsUp(medium) {
+        min-width: 40%;
+    }
+
     .logo {
         width: 5rem;
     }
 
 }
 
-.features__left, .features__right, .features__image {
-    width: 50%;
+.hero__discord {
+    @include breakpointsDown(medium) {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.hero__wrapper {
+    width: 100%;
+    @include breakpointsDown(medium) {
+        @include flexColumn(flex-start, center);
+    }
+    @include breakpointsUp(medium) {
+        @include flexRow(space-between, center);
+    }
+}
+
+.features__left, .features__right, .features__image, .fop__left, .fop__image {
+    @include breakpointsUp(medium) {
+        width: 50%;
+    }
 }
 
 .features__left {
-    padding-right: 2rem;
+    @include breakpointsUp(medium) {
+        padding-right: 2rem;
+    }
 }
 
 .features__right {
-    padding-left: 2rem;
+    @include breakpointsUp(medium) {
+        padding-left: 2rem;
+    }
+}
+
+.values__wrapper, .wishlist__wrapper {
+    @include breakpointsUp(medium) {
+        @include flexRow(space-between, flex-start);
+    }
+}
+
+.values__col, .wishlist__col {
+   padding: 1.25rem;
+    @include breakpointsUp(medium) {
+        width: 33%;
+    }
+}
+
+.fop__left {
+    @include breakpointsUp(medium) {
+        padding-right: 2rem;
+    }
+}
+
+.fop__form {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: $black;
+}
+
+input[type="email"] {
+    width: 100%;
+    height: 3rem;
+    background-color: $black;
+    border: 1px solid rgba($color: #ffffff, $alpha: 0.5);
+    padding-left: 1.5rem;
 }

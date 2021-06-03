@@ -60,7 +60,7 @@
 
 @font-face {
   font-family: "Agency FB";
-  src: url("../static/fonts/agencyr.ttf") format("truetype");
+  src: url("/fonts/agencyr.ttf") format("truetype");
   font-display: swap;
 }
 html {
@@ -662,8 +662,11 @@ body {
   align-items: normal;
 }
 
+#hero, #values, #fop, #wishlist {
+  border-bottom: 1px solid #ffffff;
+}
+
 .hero__discord, .hero__fop {
-  width: 25rem;
   background-color: #181818;
   display: inline-flex;
   flex-direction: row;
@@ -673,20 +676,100 @@ body {
   padding: 3.75rem 2.5rem;
   border-radius: 0.5rem;
 }
+@media (max-width: 47.9375rem) {
+  .hero__discord, .hero__fop {
+    width: 100%;
+  }
+}
+@media (min-width: 48rem) {
+  .hero__discord, .hero__fop {
+    min-width: 40%;
+  }
+}
 .hero__discord .logo, .hero__fop .logo {
   width: 5rem;
 }
 
-.features__left, .features__right, .features__image {
-  width: 50%;
+@media (max-width: 47.9375rem) {
+  .hero__discord {
+    margin-bottom: 2.5rem;
+  }
 }
 
-.features__left {
-  padding-right: 2rem;
+.hero__wrapper {
+  width: 100%;
+}
+@media (max-width: 47.9375rem) {
+  .hero__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+@media (min-width: 48rem) {
+  .hero__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
-.features__right {
-  padding-left: 2rem;
+@media (min-width: 48rem) {
+  .features__left, .features__right, .features__image, .fop__left, .fop__image {
+    width: 50%;
+  }
+}
+
+@media (min-width: 48rem) {
+  .features__left {
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .features__right {
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .values__wrapper, .wishlist__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.values__col, .wishlist__col {
+  padding: 1.25rem;
+}
+@media (min-width: 48rem) {
+  .values__col, .wishlist__col {
+    width: 33%;
+  }
+}
+
+@media (min-width: 48rem) {
+  .fop__left {
+    padding-right: 2rem;
+  }
+}
+
+.fop__form {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #000000;
+}
+
+input[type=email] {
+  width: 100%;
+  height: 3rem;
+  background-color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding-left: 1.5rem;
 }
 
 header {
