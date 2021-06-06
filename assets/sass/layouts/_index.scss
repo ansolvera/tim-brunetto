@@ -105,3 +105,24 @@ input[type="email"] {
     border: 1px solid rgba($color: #ffffff, $alpha: 0.5);
     padding-left: 1.5rem;
 }
+
+.wishlist__col {
+    @include flexColumn(center, center);
+
+    .logo {
+        height: 15rem; // 240px
+    }
+
+}
+
+.circle-container {
+    @include on-circle($item-count: 8, $circle-size: 20rem, $item-size: 6rem);
+    margin: 5rem auto 0;
+    border: solid 5px white;
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+}
