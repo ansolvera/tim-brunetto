@@ -735,7 +735,7 @@ body {
 }
 
 @media (min-width: 48rem) {
-  .values__wrapper, .wishlist__wrapper {
+  .values__wrapper, .wishlist__wrapper, .info__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -743,11 +743,11 @@ body {
   }
 }
 
-.values__col, .wishlist__col {
+.values__col, .wishlist__col, .info__col {
   padding: 1.25rem;
 }
 @media (min-width: 48rem) {
-  .values__col, .wishlist__col {
+  .values__col, .wishlist__col, .info__col {
     width: 33%;
   }
 }
@@ -772,12 +772,13 @@ input[type=email] {
   padding-left: 1.5rem;
 }
 
-.wishlist__col {
+.wishlist__col, .info__col {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .wishlist__col .logo {
   height: 15rem;
 }
@@ -828,6 +829,14 @@ input[type=email] {
 .circle-container img {
   display: block;
   max-width: 100%;
+}
+
+.info__col .logo {
+  height: 7.5rem;
+}
+
+.logo--small {
+  height: 2.5rem;
 }
 
 header {

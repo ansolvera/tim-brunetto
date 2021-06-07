@@ -73,13 +73,13 @@
     }
 }
 
-.values__wrapper, .wishlist__wrapper {
+.values__wrapper, .wishlist__wrapper, .info__wrapper {
     @include breakpointsUp(medium) {
         @include flexRow(space-between, flex-start);
     }
 }
 
-.values__col, .wishlist__col {
+.values__col, .wishlist__col, .info__col {
    padding: 1.25rem;
     @include breakpointsUp(medium) {
         width: 33%;
@@ -106,9 +106,13 @@ input[type="email"] {
     padding-left: 1.5rem;
 }
 
-.wishlist__col {
+.wishlist__col, .info__col {
     @include flexColumn(center, center);
 
+}
+
+.wishlist__col {
+    
     .logo {
         height: 15rem; // 240px
     }
@@ -125,4 +129,16 @@ input[type="email"] {
         max-width: 100%;
     }
 
+}
+
+.info__col {
+
+    .logo {
+        height: 7.5rem ;//  120px
+    }
+
+}
+
+.logo--small {
+    height: 2.5rem;
 }
