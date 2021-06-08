@@ -95,6 +95,21 @@ a:hover {
   text-align: center;
 }
 
+.underline {
+  position: relative;
+}
+.underline::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: -1rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 40%;
+  background: #3176AA;
+}
+
 /*! tailwindcss v2.1.1 | MIT License | https://tailwindcss.com */
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
@@ -651,18 +666,71 @@ body {
   line-height: 1;
 }
 
+.prose {
+  max-width: 65ch;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.prose h2 {
+  font-size: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.3;
+}
+.prose h2 + * {
+  margin-top: 0;
+}
+.prose h3 {
+  font-size: 1.25em;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+  line-height: 1.6;
+}
+.prose h3 + * {
+  margin-top: 0;
+}
+.prose h4 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+.prose h4 + * {
+  margin-top: 0;
+}
+.prose p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+.prose img, .prose figure {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  border-radius: 0.25rem;
+  border: 1px solid #fff;
+  font-size: 2rem;
+  text-align: center;
+}
+.btn.btn--large {
+  width: 50%;
+}
+
 #hero {
   height: 67.5rem;
   background-image: url("/img/forest-placeholder.jpg");
   background-color: #333;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 #hero .flex-col {
   align-items: normal;
 }
 
-#hero, #values, #fop, #wishlist {
+#hero, #values, #fop, #wishlist, #social, #devlog {
   border-bottom: 1px solid #ffffff;
 }
 
@@ -839,6 +907,14 @@ input[type=email] {
   height: 2.5rem;
 }
 
+.orange {
+  color: #FF9C00;
+}
+
+hr {
+  margin-top: 5rem;
+}
+
 header {
   position: relative;
   z-index: 900;
@@ -864,6 +940,37 @@ header {
 .navigation .hamburger {
   height: 2rem;
   width: 2rem;
+}
+.navigation.border-b {
+  border-bottom: 1px solid #fff;
+}
+
+.body--press {
+  width: 90%;
+  max-width: 73.125rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.body--press header {
+  width: 25%;
+  height: 100vh;
+  border-right: 1px solid #fff;
+}
+.body--press main {
+  width: 75%;
+}
+
+.sidebar__wrapper {
+  padding-top: 7.5rem;
+}
+
+.sidebar__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .container {
@@ -933,6 +1040,10 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: space-between;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -34,3 +34,20 @@ a {
 .text-center {
     text-align: center;
 }
+
+.underline {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        bottom: -1rem;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        width: 40%;
+        background: $blue-400;
+    }
+
+}

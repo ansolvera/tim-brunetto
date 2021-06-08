@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+    <div class="content__wrapper">
+        <div class="sidebar"></div>
+        <div class="content">
+            <section id="about" class="section py-120">
+                <div class="prose mx-auto">
+                    {{ range .Resources.ByType "page" }}
+                        {{ .Content }}
+                    {{ end }}
+                </div>
+            </section>
+        </div>
+    </div>
+
+{{ end }}

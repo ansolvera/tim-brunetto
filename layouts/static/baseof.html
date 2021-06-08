@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ partial "head.html" . }}
+
+<body class="body--press mx-auto">
+    {{ partial "sidebar.html" . }}
+
+    <main aria-roledescription="main">
+        {{ block "main" . }} {{ end }}
+    </main>
+    
+</body>

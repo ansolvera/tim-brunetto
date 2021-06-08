@@ -21,7 +21,7 @@
     <section id="features" class="section py-120">
         <div class="container">
             <div class="text-center mx-auto mb-120">
-                <h2 class=text-5xl>Dive Into the Unknown</h2>
+                <h2 class="text-5xl underline">Dive Into the Unknown</h2>
             </div>
             <div id="feature1" class="flex-row between mb-40">
                 <div class="features__left">
@@ -72,20 +72,20 @@
     <section id="values" class="section py-120">
         <div class="container">
             <div class="text-center mx-auto mb-120">
-                <h2 class="text-5xl mb-10">Creatures Of Wars Core Values</h2>
+                <h2 class="text-5xl mb-40 underline">Creatures Of Wars Core Values</h2>
                 <p>These core values are the lifeblood of this game's development.</p>
             </div>
             <div class="values__wrapper">
                 <div class="values__col text-center">
-                    <h3 class="text-2xl mb-10">Resident</h3>
+                    <h3 class="text-2xl mb-40 underline">Resident</h3>
                     <p>Consumers of the survival horror community know how hard it can be to balance the two together. Resident Evil 4 got it right. We aim to build upon the foundation of what is already great.</p>
                 </div>
                 <div class="values__col text-center">
-                    <h3 class="text-2xl mb-10">Evil</h3>
+                    <h3 class="text-2xl mb-40 underline">Evil</h3>
                     <p>Opportunities exist to create dynamic and engaging worlds when such evil lurks around every corner. Will you cower in fear, or stand on your own two legs?</p>
                 </div>
                 <div class="values__col text-center">
-                    <h3 class="text-2xl mb-10">4 - Like</h3>
+                    <h3 class="text-2xl mb-40 underline">4 - Like</h3>
                     <p>Limited ammunition and health supplies meet intense combat and tight controls. Survival horror was never the same again.</p>
                 </div>
             </div>
@@ -107,7 +107,7 @@
             <div class="flex-row between">
                 <div class="fop__left text-center">
                     <div class="mb-80">
-                        <h2 class="text-4xl mb-40">Field Operative Program</h2>
+                        <h2 class="text-4xl mb-40 underline">Field Operative Program</h2>
                         <p>As a field operative, you will get access to exclusive content about the development of Creatures of War</p>
                     </div>
                     <form action="" class="fop__form mb-40">
@@ -160,6 +160,42 @@
         </div>
     </section>
 
+    <!-- DEVLOG SECTION -->
+    <section id="devlog" class="section py-120">
+        <div class="container">
+            <h2 class="text-5xl text-center mb-40">Devlog</h2>
+            <div class="devlog__featured__wrapper mb-80">
+                {{ range first 1 ( where ( where .Site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "=" true) }}
+                <div class="devlog__featured flex-row between">
+                    {{ with .Params.image }}
+                    <img src="/" alt="">
+                    {{ end }}
+                    <div class="devlog__featured__right">
+                        <h3 class="text-3xl mb-10">{{ .Title }}</h3>
+                        <p>{{ .Summary }}</p>
+                    </div>
+                </div>
+                {{ end }}
+                <div class="devlog__recent flex-row between">
+                    {{ range first 4 ( where ( where .Site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "=" false) }}
+                    <div class="devlog__recent__post">
+                        {{ with .Params.image }}
+                        <img src="" alt="">
+                        {{ end }}
+                        <div class="devlog__recent__bottom">
+                            <h4 class="text-2xl">{{ .Title }}</h4>
+                            <p> {{ .Summary }}</p>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="flex-row center">
+                <a href="/devlog" class="btn btn--large">Full Devlog</a>
+            </div>
+        </div>
+    </section>
+
     <!-- INFO SECTION -->
     <section id="info" class="section py-120">
         <div class="container">
@@ -181,7 +217,7 @@
             </div>
             <p class="text-base text-center mb-40">Genre: Survival Horror Approximate RD: 3/24/23</p>
             <p class="text-base text-center mb-40">Players: 1 Rating: Not Yet Rated</p>
-            <div class="flex-row between">
+            <div class="flex-row between wrap">
                 <img src="/img/youtube-logo.svg" alt="YouTube logo" class="logo--small">
                 <img src="/img/twitter-logo.svg" alt="Twitter logo" class="logo--small">
                 <img src="/img/reddit-logo.svg" alt="Reddit logo" class="logo--small">

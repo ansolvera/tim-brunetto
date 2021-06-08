@@ -4,6 +4,7 @@
     background-color: #333;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 
     .flex-col {
         align-items: normal;
@@ -11,7 +12,7 @@
 
 }
 
-#hero, #values, #fop, #wishlist {
+#hero, #values, #fop, #wishlist, #social, #devlog {
     border-bottom: 1px solid #ffffff;
 } 
 

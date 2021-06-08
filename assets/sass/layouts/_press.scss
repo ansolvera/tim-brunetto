@@ -1,0 +1,24 @@
+.body--press {
+    width: 90%;
+    max-width: 73.125rem; // 1170px
+    @include flexRow(center, center);
+
+    header {
+        width: 25%;
+        height: 100vh;
+        border-right: 1px solid #fff;
+    }
+
+    main {
+        width: 75%;
+    }
+
+}
+
+.sidebar__wrapper {
+    padding-top: 7.5rem;
+}
+
+.sidebar__menu {
+    @include flexColumn(flex-start, flex-start);
+}

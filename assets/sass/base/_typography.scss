@@ -56,3 +56,56 @@ body {
     font-size: 3.75rem;
     line-height: 1;
 }
+
+// ********************
+// PROSE
+// ********************
+
+.prose {
+    max-width: 65ch;
+    font-size: 1rem;
+    line-height: 1.75;
+
+    h2 {
+        font-size: 1.5em;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        line-height: 1.3;
+    }
+
+    h2 + * {
+        margin-top: 0;
+    }
+
+    h3 {
+        font-size: 1.25em;
+        margin-top: 1.6em;
+        margin-bottom: 0.6em;
+        line-height: 1.6;
+    }
+
+    h3 + * {
+        margin-top: 0;
+    }
+
+    h4 {
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        line-height: 1.5;
+    }
+
+    h4 + * {
+        margin-top: 0;
+    }
+
+    p {
+        margin-top: 1.25em;
+        margin-bottom: 1.25em;
+    }
+
+    img, figure {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+}

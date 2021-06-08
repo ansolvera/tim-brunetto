@@ -4,7 +4,13 @@
 {{ partial "head.html" . }}
 
 <body>
-    {{ partial "navigation.html" . }}
+    {{ if eq .Params.type "list" }}
+        {{ partial "navigation-list.html" . }}
+    {{ else if eq .Params.layout "press" }}
+        {{ partial "navigation-press.html" . }}
+    {{ else }}
+        {{ partial "navigation.html" . }}
+    {{ end }}
 
     <main aria-roledescription="main">
         {{ block "main" . }} {{ end }}
