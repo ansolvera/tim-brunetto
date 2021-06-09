@@ -1,16 +1,92 @@
 {{ define "main" }}
 
-    <div class="content__wrapper">
-        <div class="sidebar"></div>
-        <div class="content">
-            <section id="about" class="section py-120">
-                <div class="prose mx-auto">
-                    {{ range .Resources.ByType "page" }}
-                        {{ .Content }}
-                    {{ end }}
-                </div>
-            </section>
+{{ $content := .Resources.ByType "page" }}
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section py-120">
+        <h2 class="text-4xl text-center mb-40">{{ (index $content 0).Title }}</h2>
+        <div class="prose mx-auto">
+            {{ (index $content 0).Content }}
         </div>
-    </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="section py-120">
+        <h2 class="text-5xl text-center mb-40">{{ (index $content 1).Title }}</h2>
+        <div class="prose mx-auto">
+            {{ (index $content 1).Content }}
+        </div>
+    </section>
+
+    <!-- IMAGES SECTION -->
+    <section id="images" class="section py-120">
+        <div class="container is-small mx-auto">
+            <h2 class="text-5xl text-center mb-40">Images</h2>
+            <div class="images__grid">
+                <img src="/" alt="Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEOS SECTION -->
+    <section id="videos" class="section py-120">
+        <div class="container is-small mx-auto">
+            <h2 class="text-5xl text-center mb-40">Videos</h2>
+            <div class="images__grid">
+                <img src="/" alt="Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section py-120">
+        <div class="container is-small text-center mx-auto">
+            <h2 class="text-5xl text-center mb-40">Contact</h2>
+            <p class="mb-20">I will respond to any emails very quickly, within an hour if I am awake, within multiple hours if I am sleeping. For specifics on the game or any other inquiry please reach out to me via email and I will be in touch.</p>
+            <div>
+                <span>Email: </span><a href="mailto:creaturesofwar@gmail.com">creaturesofwar@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEVELOPERS SECTION -->
+    <section id="developers" class="section py-120">
+        <div class="container is-small text-center mx-auto">
+            <h2 class="text-5xl text-center mb-40">The Developers</h2>
+            <div class="mb-40">
+                <h3 class="text-2xl text-center mb-20">Tim Brunetto</h3>
+                <p>Founder of Ultima Entertainment. His love for video games began with the Megaman series and heavily evolved over the years. Loves old school games, super ghouls and ghosts is one of his favorites.</p>
+            </div>
+            <div class="mb-40">
+                <h3 class="text-2xl text-center mb-20">Jay Suong</h3>
+                <p>Likes coding tools by day, and enjoys getting into shenanigans with friends in games by night.</p>
+            </div>
+            <div class="mb-40">
+                <h3 class="text-2xl text-center mb-20">Andrew De Lange</h3>
+                <p>Likes coding tools by day, and enjoys getting into shenanigans with friends in games by night.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL SECTION -->
+    <section id="social" class="section py-120">
+        <div class="container is-small">
+            <div class="mb-40">
+                <h2 class="text-5xl text-center mb-40">Social Media</h2>
+                <p>Creatures of War is active across these social media platforms.</p>
+            </div>
+            <div class="flex-row between wrap">
+                <img src="/img/twitter-logo.svg" alt="" class="logo--small">
+                <img src="/img/discord-logo.svg" alt="" class="logo--small">
+                <img src="/img/facebook-logo.svg" alt="" class="logo--small">
+                <img src="/img/twitch-logo.svg" alt="" class="logo--small">
+                <img src="/img/youtube-logo.svg" alt="" class="logo--small">
+                <img src="/img/reddit-logo.svg" alt="" class="logo--small">
+                <img src="/img/instagram-logo.svg" alt="" class="logo--small">
+                <img src="/img/tiktok-logo.svg" alt="" class="logo--small">
+            </div>
+        </div>
+    </section>
+
 
 {{ end }}

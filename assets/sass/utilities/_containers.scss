@@ -6,7 +6,13 @@
     margin: 0 auto;
     width: 90%;
     max-width: 73.125rem;
+
+    &.is-small {
+        max-width: 65ch;
+    }
+
 }
+
 
 // ********************
 //  SECTIONS

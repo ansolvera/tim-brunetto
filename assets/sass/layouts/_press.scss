@@ -1,24 +1,38 @@
-.body--press {
+.with-sidebar {
+    display: flex;
+    height: 100vh;
     width: 90%;
     max-width: 73.125rem; // 1170px
-    @include flexRow(center, center);
+    overflow: hidden;
 
-    header {
-        width: 25%;
-        height: 100vh;
-        border-right: 1px solid #fff;
-    }
-
-    main {
-        width: 75%;
+    section {
+        border-bottom: 1px solid $white;
     }
 
 }
 
-.sidebar__wrapper {
+#sidebar {
     padding-top: 7.5rem;
+    border-right: 1px solid $white;
+}
+
+main {
+    flex: 1 1 auto;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .sidebar__menu {
-    @include flexColumn(flex-start, flex-start);
+    @include flexColumn(center, flex-start);
+}
+
+.images__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: row;
 }

@@ -3,11 +3,12 @@
 
 {{ partial "head.html" . }}
 
-<body class="body--press mx-auto">
-    {{ partial "sidebar.html" . }}
+<body>
+    <div class="container with-sidebar">
+        {{ partial "sidebar.html" . }}
 
-    <main aria-roledescription="main">
-        {{ block "main" . }} {{ end }}
-    </main>
-    
+        <main aria-roledescription="main">
+            {{ block "main" . }} {{ end }}
+        </main>
+    </div>
 </body>
