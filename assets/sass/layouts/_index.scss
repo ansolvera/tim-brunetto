@@ -143,3 +143,25 @@ input[type="email"] {
 .logo--small {
     height: 2.5rem;
 }
+
+.tabs__navigation {
+    flex-wrap: wrap;
+    @include flexRow(center, center);
+
+    > a {
+        font-size: 1.875rem;
+        padding: 2.5rem;
+        cursor: pointer;
+    }
+
+}
+
+.tabs__content {
+
+    @include flexRow(center, center);
+
+    > p {
+        max-width: 65ch;
+    }
+
+}

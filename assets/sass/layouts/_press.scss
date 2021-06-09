@@ -1,35 +1,37 @@
 .with-sidebar {
-    display: flex;
-    height: 100vh;
-    width: 90%;
-    max-width: 73.125rem; // 1170px
-    overflow: hidden;
-
+    
     section {
         border-bottom: 1px solid $white;
     }
 
-}
+    @include breakpointsUp(medium) {
+        display: flex;
+        height: 100vh;
+        width: 90%;
+        max-width: 73.125rem; // 1170px
+        overflow: hidden;
+    }
 
-#sidebar {
-    padding-top: 7.5rem;
-    border-right: 1px solid $white;
 }
 
 main {
-    flex: 1 1 auto;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+
+    @include breakpointsUp(medium) {
+        flex: 1 1 auto;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     
-    &::-webkit-scrollbar {
-        display: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
     }
+
+    
 }
 
-.sidebar__menu {
-    @include flexColumn(center, flex-start);
-}
+
 
 .images__grid {
     display: grid;

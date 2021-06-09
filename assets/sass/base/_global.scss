@@ -3,6 +3,14 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+
+}
+
 main {
     margin-top: -3.75rem;
 }

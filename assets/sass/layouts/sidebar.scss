@@ -1,0 +1,44 @@
+#sidebar {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+
+    height: 3.75rem;
+
+    @include breakpointsUp(medium) {
+        height: 100vh;
+        flex-direction: column;
+        padding-top: 7.5rem;
+        border-right: 1px solid $white;
+    }
+
+}
+
+.sidebar {
+    width: 100%;
+    @include flexRow(center, center);
+}
+
+.sidebar__menu {
+    @include flexRow(space-between, center);
+
+    @include breakpointsUp(medium) {
+
+        > a:first-of-type {
+            margin-bottom: 2.5rem;
+        }
+
+        @include flexColumn(center, flex-start);
+    }
+
+}
+
+.sidebar__links {
+    @include breakpointsUp(medium) {
+        @include flexColumn(center, flex-start);
+    }
+
+    
+}

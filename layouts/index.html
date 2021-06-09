@@ -101,6 +101,34 @@
         </div>
     </section>
 
+    <!-- TABBED SECTION -->
+    <section id="tabs" class="section py-120">
+        <div class="container">
+            <h2 class="text-5xl text-center mb-10">Bio Organic Weapons</h2>
+            <p class="text-3xl text-center">Satellite Images have revealed these creatures to us, we need to find out what else resides on Ko'Vorest Island.</p>
+            <div class="tabs__wrapper mx-auto" x-data="{ tab: 'amargonyx' }">
+                <nav class="tabs__navigation">
+                    <a href="#" :class="{ 'active': tab === 'amargonyx' }" @click.prevent="tab = 'amargonyx'">Amargonyx</a>
+                    <a href="#" :class="{ 'active': tab === 't-rex' }" @click.prevent="tab = 't-rex'">T-Rex</a>
+                    <a href="#" :class="{ 'active': tab === 'bulletwolf' }" @click.prevent="tab = 'bulletwolf'">Bulletwolf</a>
+                    <a href="#" :class="{ 'active': tab === 'utah' }" @click.prevent="tab = 'utah'">Utah</a>
+                </nav>
+                <div class="tabs__content" x-show="tab === 'amargonyx'">
+                    <p class="text-center">The Amargonyx is the result of genetic tampering between an Allosaurus and a Titanosaur. The alarming size of this creature makes their hides extremely thick, making them all the harder to kill. They are very ill tempered creatures and will hunt their prey to the death after being provoked. Their long necks allow for crushing blows to take place from unsuspecting distances.</p>
+                </div>
+                <div class="tabs__content text-center" x-show="tab === 't-rex'">
+                    <p class="text-center">The biggest and baddest dinosaur on the island, at least at first. The T-Rex is the epitome of power and death. One swift bite is capable of ripping its victims to shreds. The typical reaction is to run, but recent testing has shown that the T-Rex can vastly outrun any human. It is highly advisable to proceed with caution if a T-Rex is thought to be in the area.</p>
+                </div>
+                <div class="tabs__content text-center" x-show="tab === 'bulletwolf'">
+                    <p class="text-center">The Bulletwolf Ant Queen has only been known to inhabit the deepest and warmest chambers of their bulletwolf ant farms. They lay eggs at an alarming rate and have voracious appetites that never slow down. The worst part about them is they don't do the hunting and their combat capabilities are largely unknown.</p>
+                </div>
+                <div class="tabs__content text-center" x-show="tab === 'utah'">
+                    <p class="text-center"> The Utah Raptor is the velociraptor's big older brother, as they are taller, heftier, and wield longer claws. These factors alone make this an intimidating foe all by themselves, but of course the Utah Raptor happens to be a pack hunter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FOP SECTION -->
     <section id="fop" class="section py-120">
         <div class="container">
@@ -229,5 +257,8 @@
             </div>
         </div>
     </section>
+
+    <!-- FOP MODAL -->
+    {{ partial "modal.html" . }}
 
 {{ end }}
