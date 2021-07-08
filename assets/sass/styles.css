@@ -761,10 +761,10 @@ body {
 
 #hero {
   height: 67.5rem;
-  background-image: url("/img/forest-placeholder.jpg");
+  background-image: url("/img/cover-image.webp");
   background-color: #333;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
 }
 #hero .flex-col {
@@ -963,7 +963,7 @@ input[type=email] {
 
 .tabs__content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
