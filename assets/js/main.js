@@ -2,7 +2,7 @@
 // FOP MODAL
 // ********************
 
-let fopped = false;
+let fopped = true;
 
 const fop = document.querySelector("#overlay");
 const body = document.querySelector("body");
