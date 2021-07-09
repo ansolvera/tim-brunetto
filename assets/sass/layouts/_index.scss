@@ -5,6 +5,8 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
 
     .flex-col {
         align-items: normal;
@@ -164,4 +166,27 @@ input[type="email"] {
         max-width: 65ch;
     }
 
+}
+
+.tabs__amargonyx, .tabs__t-rex, .tabs__bulletwolf, .tabs__utah {
+    width: 6.5rem; height: 6.5rem;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.tabs__amargonyx {
+    background-image: url('/img/profile_amargonyx.webp');
+}
+
+.tabs__t-rex {
+    background-image: url('/img/profile_trex.webp');
+}
+
+.tabs__bulletwolf {
+    background-image: url('/img/profile_bulletwolf.webp');
+}
+
+.tabs__utah {
+    background-image: url('/img/profile_utah.webp');
 }

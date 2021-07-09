@@ -20,7 +20,7 @@ a {
     transition: color 300ms ease-in-out;
 
     &:hover {
-        color: $blue-400;
+        color: $red-400;
     }
 
 }
@@ -55,7 +55,11 @@ a {
         left: 0;
         right: 0;
         width: 40%;
-        background: $blue-400;
+        background: $red-400;
     }
 
+}
+
+.is-hidden {
+    display: none;
 }

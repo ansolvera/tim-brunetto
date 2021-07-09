@@ -1,28 +1,12 @@
-#overlay {
-
-    display: none;
-
-    &.is-fopped {
-        z-index: 999;
-        height: 100vh;
-        width: 100vw;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(#181818, 0.9);
-        backdrop-filter: blur(4px) saturate(110%);
-
-        @include flexRow(center, center);
-    }
-
-}
-
 #modal {
-    width: 50vw;
-    border: 1px solid $white;
+    position: fixed;
+    right: 2.5%; bottom: 2.5%;
+    width: 90%;
+    max-width: 30rem;
+    border: 2px solid $white;
+    border-radius: 0.25rem;
     background-color: $gray-900;
+    text-align: center;
 
     @include flexColumn(center, center);
 
@@ -35,4 +19,15 @@
         padding: 2.5rem;
     }
 
+}
+
+#close {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: -2.5%; right: -2.5%;
+    width: 2.5rem; height: 2.5rem;
+    background-color: $white;
+    border-radius: 50%;
+    cursor: pointer;
 }

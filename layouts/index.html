@@ -108,10 +108,22 @@
             <p class="text-3xl text-center">Satellite Images have revealed these creatures to us, we need to find out what else resides on Ko'Vorest Island.</p>
             <div class="tabs__wrapper mx-auto" x-data="{ tab: 'amargonyx' }">
                 <nav class="tabs__navigation">
-                    <a href="#" :class="{ 'active': tab === 'amargonyx' }" @click.prevent="tab = 'amargonyx'">Amargonyx</a>
-                    <a href="#" :class="{ 'active': tab === 't-rex' }" @click.prevent="tab = 't-rex'">T-Rex</a>
-                    <a href="#" :class="{ 'active': tab === 'bulletwolf' }" @click.prevent="tab = 'bulletwolf'">Bulletwolf</a>
-                    <a href="#" :class="{ 'active': tab === 'utah' }" @click.prevent="tab = 'utah'">Utah</a>
+                    <a href="#" :class="{ 'active': tab === 'amargonyx' }" @click.prevent="tab = 'amargonyx'">
+                        <div class="tabs__amargonyx mb-10"></div>
+                        <p class="text-center">Amargonyx</p>
+                    </a>
+                    <a href="#" :class="{ 'active': tab === 't-rex' }" @click.prevent="tab = 't-rex'">
+                        <div class="tabs__t-rex mb-10"></div>
+                        <p class="text-center">T-Rex</p>
+                    </a>
+                    <a href="#" :class="{ 'active': tab === 'bulletwolf' }" @click.prevent="tab = 'bulletwolf'">
+                        <div class="tabs__bulletwolf mb-10"></div>
+                        <p class="text-center">Bulletwolf</p>
+                    </a>
+                    <a href="#" :class="{ 'active': tab === 'utah' }" @click.prevent="tab = 'utah'">
+                        <div class="tabs__utah mb-10"></div>
+                        <p class="text-center">Utah</p>
+                    </a>
                 </nav>
                 <div class="tabs__content" x-show="tab === 'amargonyx'">
                     <img src="/img/amargonyx.webp" alt="" class="mb-40">
