@@ -1,6 +1,6 @@
 #modal {
     position: fixed;
-    right: 2.5%; bottom: 2.5%;
+    right: 2.5%; bottom: 2.5%; left: 2.5%;
     width: 90%;
     max-width: 30rem;
     border: 2px solid $white;
@@ -10,8 +10,11 @@
     transform: translateX(-50vw);
     opacity: 0.5;
     visibility: hidden;
-
     @include flexColumn(center, center);
+
+    @include breakpointsUp(medium) {
+        left: unset;
+    }
 
     > * {
         height: 50%;

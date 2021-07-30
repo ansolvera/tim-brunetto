@@ -49,13 +49,24 @@ a {
     &::after {
         content: '';
         position: absolute;
-        height: 2px;
-        bottom: -1rem;
         margin: 0 auto;
-        left: 0;
-        right: 0;
-        width: 40%;
+        width: 40%; height: 2px;
+        right: 0; bottom: -1rem; left: 0;
         background: $red-400;
+    }
+
+}
+
+.underline-blue {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        margin: 0;
+        width: 30%; height: 2px;
+        right: 0; bottom: -1rem; left: 0;
+        background: $blue-400;
     }
 
 }

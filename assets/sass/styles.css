@@ -105,13 +105,28 @@ a:hover {
 .underline::after {
   content: "";
   position: absolute;
-  height: 2px;
-  bottom: -1rem;
   margin: 0 auto;
-  left: 0;
-  right: 0;
   width: 40%;
+  height: 2px;
+  right: 0;
+  bottom: -1rem;
+  left: 0;
   background: #7D0100;
+}
+
+.underline-blue {
+  position: relative;
+}
+.underline-blue::before {
+  content: "";
+  position: absolute;
+  margin: 0;
+  width: 30%;
+  height: 2px;
+  right: 0;
+  bottom: -1rem;
+  left: 0;
+  background: #3176AA;
 }
 
 .is-hidden {
@@ -734,6 +749,7 @@ body {
   position: fixed;
   right: 2.5%;
   bottom: 2.5%;
+  left: 2.5%;
   width: 90%;
   max-width: 30rem;
   border: 2px solid #ffffff;
@@ -747,6 +763,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 48rem) {
+  #modal {
+    left: unset;
+  }
 }
 #modal > * {
   height: 50%;
@@ -989,7 +1010,7 @@ input[type=email] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   padding: 2.5rem;
   cursor: pointer;
 }
@@ -1006,10 +1027,15 @@ input[type=email] {
 
 .tabs__amargonyx, .tabs__t-rex, .tabs__bulletwolf, .tabs__utah, .tabs__hornoraptor, .tabs__procompsognathus, .tabs__spider {
   width: 6.5rem;
-  height: 6.5rem;
-  background-size: contain;
+  height: 4.5rem;
+  background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
+  overflow: hidden;
+  transition: background-size 0.3s;
+}
+.tabs__amargonyx:hover, .tabs__t-rex:hover, .tabs__bulletwolf:hover, .tabs__utah:hover, .tabs__hornoraptor:hover, .tabs__procompsognathus:hover, .tabs__spider:hover {
+  background-size: 125% 125%;
 }
 
 .tabs__amargonyx {
@@ -1112,6 +1138,10 @@ header {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-flow: row;
+}
+
+.logo--small {
+  margin: 1.25rem;
 }
 
 #sidebar {

@@ -156,7 +156,7 @@ input[type="email"] {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 1.875rem;
+        font-size: 1.5rem;
         padding: 2.5rem;
         cursor: pointer;
     }
@@ -174,10 +174,17 @@ input[type="email"] {
 }
 
 .tabs__amargonyx, .tabs__t-rex, .tabs__bulletwolf, .tabs__utah, .tabs__hornoraptor, .tabs__procompsognathus, .tabs__spider {
-    width: 6.5rem; height: 6.5rem;
-    background-size: contain;
+    width: 6.5rem; height: 4.5rem;
+    background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat;
+    overflow: hidden;
+    transition: background-size 0.3s;
+
+    &:hover {
+        background-size: 125% 125%;
+    }
+
 }
 
 .tabs__amargonyx {
