@@ -58,24 +58,6 @@
     }
 }
 
-.features__left, .features__right, .features__image, .fop__left, .fop__image {
-    @include breakpointsUp(medium) {
-        width: 50%;
-    }
-}
-
-.features__left {
-    @include breakpointsUp(medium) {
-        padding-right: 2rem;
-    }
-}
-
-.features__right {
-    @include breakpointsUp(medium) {
-        padding-left: 2rem;
-    }
-}
-
 .values__wrapper, .wishlist__wrapper, .info__wrapper {
     @include breakpointsUp(medium) {
         @include flexRow(space-between, flex-start);
@@ -89,10 +71,15 @@
     }
 }
 
-.fop__left {
-    @include breakpointsUp(medium) {
-        padding-right: 2rem;
-    }
+#fop {
+    background-color: #333;
+    background-image: url('/img/metal-background.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    border-top: 1px solid #fff;
 }
 
 .fop__form {
@@ -123,9 +110,8 @@ input[type="email"] {
 }
 
 .circle-container {
-    @include on-circle($item-count: 8, $circle-size: 20rem, $item-size: 6rem);
+    @include on-circle($item-count: 8, $circle-size: 40rem, $item-size: 6rem);
     margin: 5rem auto 0;
-    border: solid 5px white;
 
     img {
         display: block;

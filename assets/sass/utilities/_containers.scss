@@ -84,3 +84,101 @@
 .wrap {
     flex-wrap: wrap;
 }
+
+// ********************
+// GRID
+// ********************
+
+.grid-cols-2 {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, min-content));
+
+    @include breakpointsUp(large) {
+        grid-template-rows: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+.grid-cols-3 {
+    display: grid;
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+
+    @include breakpointsUp(large) {
+        grid-template-rows: none;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+.grid-cols-4 {
+    display: grid;
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+
+    @include breakpointsUp(large) {
+        grid-template-rows: none;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+}
+
+.grid-cols-6 {
+    display: grid;
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @include breakpointsUp(large) {
+        grid-template-rows: none;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+}
+
+.place-items-center {
+    place-items: center;
+}
+
+.grid-auto-cols {
+    display: grid;
+    grid-auto-rows: auto;
+
+    @include breakpointsUp(large) {
+        grid-auto-rows: unset;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+.reversed {
+    :first-child {
+        order: 2;
+    }
+    :last-child {
+        order: 1;
+    }
+
+    @include breakpointsUp(large) {
+        :first-child {
+            order: 1;
+        }
+        :last-child {
+            order: 2;
+        }
+    }
+}
+
+// ********************
+// GRID GAPS
+// ********************
+
+.gap-30 {
+    gap: 1.875rem;
+}
+
+.gap-60 {
+    gap: 3.75rem;
+}
+
+.gap-120 {
+    gap: 7.5rem;
+}
