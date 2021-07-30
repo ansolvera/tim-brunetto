@@ -109,9 +109,24 @@ input[type="email"] {
 
 }
 
+.social-container {
+    position: relative;
+}
+
+.social__copy {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
 .circle-container {
-    @include on-circle($item-count: 8, $circle-size: 40rem, $item-size: 6rem);
+    @include on-circle($item-count: 8, $circle-size: 60rem, $item-size: 6rem);
     margin: 5rem auto 0;
+    background-image: url('/img/blood-splatter.webp');
+    background-position: center center;
+    background-size: 85%;
+    background-repeat: no-repeat;
 
     img {
         display: block;
@@ -137,6 +152,10 @@ input[type="email"] {
     @include flexRow(center, center);
 
     > a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         font-size: 1.875rem;
         padding: 2.5rem;
         cursor: pointer;
@@ -154,7 +173,7 @@ input[type="email"] {
 
 }
 
-.tabs__amargonyx, .tabs__t-rex, .tabs__bulletwolf, .tabs__utah {
+.tabs__amargonyx, .tabs__t-rex, .tabs__bulletwolf, .tabs__utah, .tabs__hornoraptor, .tabs__procompsognathus, .tabs__spider {
     width: 6.5rem; height: 6.5rem;
     background-size: contain;
     background-position: center center;
@@ -175,4 +194,16 @@ input[type="email"] {
 
 .tabs__utah {
     background-image: url('/img/profile_utah.webp');
+}
+
+.tabs__hornoraptor {
+    background-image: url('/img/profile_hornoraptor.webp');
+}
+
+.tabs__procompsognathus {
+    background-image: url('/img/profile_procompsognathus.webp');
+}
+
+.tabs__spider {
+    background-image: url('/img/profile_wandering.webp');
 }

@@ -124,6 +124,18 @@
                         <div class="tabs__utah mb-10"></div>
                         <p class="text-center">Utah</p>
                     </a>
+                    <a href="#" :class="{ 'active': tab === 'hornoraptor' }" @click.prevent="tab = 'hornoraptor'">
+                        <div class="tabs__hornoraptor mb-10"></div>
+                        <p class="text-center">Hornoraptor</p>
+                    </a>
+                    <a href="#" :class="{ 'active': tab === 'procompsognathus' }" @click.prevent="tab = 'procompsognathus'">
+                        <div class="tabs__procompsognathus mb-10"></div>
+                        <p class="text-center">Procompsognathus</p>
+                    </a>
+                    <a href="#" :class="{ 'active': tab === 'procompsognathus' }" @click.prevent="tab = 'spider'">
+                        <div class="tabs__spider mb-10"></div>
+                        <p class="text-center">Gigantus Wandering Spitting Spider</p>
+                    </a>
                 </nav>
                 <div class="tabs__content" x-show="tab === 'amargonyx'">
                     <img src="/img/amargonyx.webp" alt="" class="mb-40">
@@ -139,7 +151,19 @@
                 </div>
                 <div class="tabs__content text-center" x-show="tab === 'utah'">
                     <img src="/img/utah.webp" alt="" class="mb-40">
-                    <p class="text-center"> The Utah Raptor is the velociraptor's big older brother, as they are taller, heftier, and wield longer claws. These factors alone make this an intimidating foe all by themselves, but of course the Utah Raptor happens to be a pack hunter.</p>
+                    <p class="text-center">The Utah Raptor is the velociraptor's big older brother, as they are taller, heftier, and wield longer claws. These factors alone make this an intimidating foe all by themselves, but of course the Utah Raptor happens to be a pack hunter.</p>
+                </div>
+                <div class="tabs__content text-center" x-show="tab === 'hornoraptor'">
+                    <img src="/img/hornoraptor.webp" alt="" class="mb-40">
+                    <p class="text-center">Death from above and below. The Giant Asian Hornoraptor delivers a sting equally painful as it is poisonous. The victims are consumed on site. Long claws, viscious teeth, and that harrowing sound when one is flying in the air will send chills down your spine.</p>
+                </div>
+                <div class="tabs__content text-center" x-show="tab === 'procompsognathus'">
+                    <img src="/img/procompsognathus.webp" alt="" class="mb-40">
+                    <p class="text-center">Quick and small, pack hunter, slightly venomous, and surprisingly aggressive. The procompsognathus does not have the hides or the offensive capabilities of other creatures on Ko'Vorest island, but what it lacks in lethality is made up in numbers. If you encounter one of these creatures, expect the entire family.</p>
+                </div>
+                <div class="tabs__content text-center" x-show="tab === 'spider'">
+                    <img src="/img/spider.webp" alt="" class="mb-40">
+                    <p class="text-center">The Gigantus Wandering Spitting Spider has been genetically engineered from two genus of arachnids to create the ultimate spider. Crippling poison, engulfing webs shot from distance, and a fang size that can serrate any flesh it encounters briefly describes this creature's terrifying capabilities.</p>
                 </div>
             </div>
         </div>
@@ -189,18 +213,21 @@
     </section>
 
     <!-- SOCIAL SECTION -->
-    <section id="social" class="section py-120">
+    <section id="social" class="section py-120 hidden-for-mobile">
         <div class="container">
-            <ul class="circle-container">
-                <li><img src="/img/discord-logo-purple.svg" alt="Discord logo"></li>
-                <li><img src="/img/instagram-logo.svg" alt="Instagram logo"></li>
-                <li><img src="/img/twitch-logo.svg" alt="Twitch logo"></li>
-                <li><img src="/img/twitter-logo.svg" alt="Twitter logo"></li>
-                <li><img src="/img/facebook-logo.svg" alt="Facebook logo"></li>
-                <li><img src="/img/tiktok-logo.svg" alt="TikTok logo"></li>
-                <li><img src="/img/youtube-logo.svg" alt="YouTube logo"></li>
-                <li><img src="/img/reddit-logo.svg" alt="Reddit logo"></li>
-            </ul>
+            <div class="social-container">
+                <p class="social__copy text-center text-3xl">Courageously follow us<br>on social media</p>
+                <ul class="circle-container">
+                    <li><img src="/img/discord-logo-purple.svg" alt="Discord logo"></li>
+                    <li><img src="/img/instagram-logo.svg" alt="Instagram logo"></li>
+                    <li><img src="/img/twitch-logo.svg" alt="Twitch logo"></li>
+                    <li><img src="/img/twitter-logo.svg" alt="Twitter logo"></li>
+                    <li><img src="/img/facebook-logo.svg" alt="Facebook logo"></li>
+                    <li><img src="/img/tiktok-logo.svg" alt="TikTok logo"></li>
+                    <li><img src="/img/youtube-logo.svg" alt="YouTube logo"></li>
+                    <li><img src="/img/reddit-logo.svg" alt="Reddit logo"></li>
+                </ul>
+            </div>
         </div>
     </section>
 

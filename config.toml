@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "en-us"
 languageName = "English"
 
-title = "My New Hugo Site"
+title = "Creatures of War"
 
 enableRobotsTXT = true
 canonifyURLs = true

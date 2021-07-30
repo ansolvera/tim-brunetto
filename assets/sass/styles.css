@@ -907,14 +907,29 @@ input[type=email] {
   height: 15rem;
 }
 
+.social-container {
+  position: relative;
+}
+
+.social__copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .circle-container {
   position: relative;
-  width: 40rem;
-  height: 40rem;
+  width: 60rem;
+  height: 60rem;
   padding: 0;
   border-radius: 50%;
   list-style: none;
   margin: 5rem auto 0;
+  background-image: url("/img/blood-splatter.webp");
+  background-position: center center;
+  background-size: 85%;
+  background-repeat: no-repeat;
 }
 .circle-container > * {
   display: block;
@@ -926,28 +941,28 @@ input[type=email] {
   margin: -3rem;
 }
 .circle-container > *:nth-of-type(1) {
-  transform: rotate(0deg) translate(20rem) rotate(0deg);
+  transform: rotate(0deg) translate(30rem) rotate(0deg);
 }
 .circle-container > *:nth-of-type(2) {
-  transform: rotate(45deg) translate(20rem) rotate(-45deg);
+  transform: rotate(45deg) translate(30rem) rotate(-45deg);
 }
 .circle-container > *:nth-of-type(3) {
-  transform: rotate(90deg) translate(20rem) rotate(-90deg);
+  transform: rotate(90deg) translate(30rem) rotate(-90deg);
 }
 .circle-container > *:nth-of-type(4) {
-  transform: rotate(135deg) translate(20rem) rotate(-135deg);
+  transform: rotate(135deg) translate(30rem) rotate(-135deg);
 }
 .circle-container > *:nth-of-type(5) {
-  transform: rotate(180deg) translate(20rem) rotate(-180deg);
+  transform: rotate(180deg) translate(30rem) rotate(-180deg);
 }
 .circle-container > *:nth-of-type(6) {
-  transform: rotate(225deg) translate(20rem) rotate(-225deg);
+  transform: rotate(225deg) translate(30rem) rotate(-225deg);
 }
 .circle-container > *:nth-of-type(7) {
-  transform: rotate(270deg) translate(20rem) rotate(-270deg);
+  transform: rotate(270deg) translate(30rem) rotate(-270deg);
 }
 .circle-container > *:nth-of-type(8) {
-  transform: rotate(315deg) translate(20rem) rotate(-315deg);
+  transform: rotate(315deg) translate(30rem) rotate(-315deg);
 }
 .circle-container img {
   display: block;
@@ -970,6 +985,10 @@ input[type=email] {
   align-items: center;
 }
 .tabs__navigation > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: 1.875rem;
   padding: 2.5rem;
   cursor: pointer;
@@ -985,7 +1004,7 @@ input[type=email] {
   max-width: 65ch;
 }
 
-.tabs__amargonyx, .tabs__t-rex, .tabs__bulletwolf, .tabs__utah {
+.tabs__amargonyx, .tabs__t-rex, .tabs__bulletwolf, .tabs__utah, .tabs__hornoraptor, .tabs__procompsognathus, .tabs__spider {
   width: 6.5rem;
   height: 6.5rem;
   background-size: contain;
@@ -1007,6 +1026,18 @@ input[type=email] {
 
 .tabs__utah {
   background-image: url("/img/profile_utah.webp");
+}
+
+.tabs__hornoraptor {
+  background-image: url("/img/profile_hornoraptor.webp");
+}
+
+.tabs__procompsognathus {
+  background-image: url("/img/profile_procompsognathus.webp");
+}
+
+.tabs__spider {
+  background-image: url("/img/profile_wandering.webp");
 }
 
 .orange {
