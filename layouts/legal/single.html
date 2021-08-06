@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<!-- HERO SECTION -->
+
+<section id="privacy-hero" class="section py-120">
+    <div class="container">
+        <div class="text-center mx-auto mb-120">
+            <h2 class="text-5xl mb-40">{{ .Title }}</h2>
+            <p class="text-xl"><strong>Last updated: </strong>{{ .Lastmod.Format "January 2, 2006" }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTENT SECTION -->
+
+<section id="content" class="section pt-0">
+    <div class="container">
+        <div class="content__wrapper">
+            {{ .Content }}
+        </div>
+    </div>
+</section>
+
+
+{{ end }}

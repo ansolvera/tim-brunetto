@@ -7,8 +7,7 @@
 
 }
 
-#hero, #info {
-    height: 67.5rem;
+.hero__features__wrapper {
     background-image: url('/img/cover-image.webp');
     background-color: #333;
     background-repeat: no-repeat;
@@ -88,19 +87,69 @@
 
 #fop {
     background-color: #333;
-    background-image: url('/img/metal-background.webp');
-    background-size: cover;
-    background-position: center center;
+    background-image: url('/img/field-op.webp');
+    background-size: auto 100%;
+    background-position: 25% center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-blend-mode: overlay;
     border-top: 1px solid #fff;
 }
 
+.fop__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpointsUp(large) {
+        justify-content: flex-end;
+    }
+
+}
+
+.fop__left {
+    text-align: center;
+
+    @include breakpointsUp(large) {
+        text-align: start;
+    }
+
+}
+
+.fop__left h2 {
+    position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            margin: 0 auto;
+            width: 40%; height: 2px;
+            right: 0; bottom: -1rem; left: 0;
+            background: $red-400;
+
+            @include breakpointsUp(large) {
+                margin-left: unset;
+                margin-right: unset;
+            }
+
+        }
+
+
+}
+
 .fop__form {
     width: 100%;
+    max-width: 35.625rem;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1.5rem;
     background-color: $black;
+
+    @include breakpointsUp(large) {
+        margin-left: unset;
+    }
+
 }
 
 input[type="email"] {
@@ -130,7 +179,7 @@ input[type="email"] {
 
 }
 
-#social {
+.wishlist__social__wrapper {
     background-image: url('/img/purussaurus.webp');
     background-position: center center;
     background-size: cover;
@@ -278,6 +327,10 @@ input[type="email"] {
 .devlog__featured {
     margin-bottom: 2.5rem;
 
+    &:hover {
+        color: unset;
+    }
+
     h3 {
         margin-bottom: 1.25rem;
     }
@@ -297,6 +350,10 @@ input[type="email"] {
 
     &:last-of-type {
         margin-bottom: 0;
+    }
+
+    &:hover {
+        color: unset;
     }
 
     @include breakpointsUp(medium) {
@@ -328,4 +385,22 @@ input[type="email"] {
         overflow: hidden;
     }
 
+}
+
+.features__right {
+
+    li {
+        list-style-type: square;
+    }
+
+}
+
+.devlog__info__wrapper {
+    background-image: url('/img/cover-image.webp');
+    background-color: #333;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
 }

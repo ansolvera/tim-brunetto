@@ -4,7 +4,7 @@
 <section id="posts" class="section py-120">
     <div class="container">
         {{ range .Pages }}
-            <article class="prose mx-auto">
+            <article id="{{ .Params.slug }}" class="prose mx-auto">
                 <h2 class="text-4xl mb-10">{{ .Title }}</h2>
                 <p class="text-sm mb-20">Posted on <span class="orange">{{ .Date.Format "2006-01-02" }}</span></p>
                 {{ .Content }}
