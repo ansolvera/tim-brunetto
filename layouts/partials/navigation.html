@@ -6,10 +6,10 @@
                     <div class="flex-row start">
                         <p class="text-2xl">Wishlist</p>
                         <a href="https://epicgames.com/store/en-US/" target="_blank" rel="noopener noreferrer">
-                            <img src="/img/epic-games-logo.svg" alt="Epic Games logo" class="logo">
+                            <img src="/img/epic-games-logo.svg" alt="Epic Games logo" class="logo hidden">
                         </a>
                         <a href="https://humblebundle.com/" target="_blank" rel="noopener noreferrer">
-                            <img src="/img/humble-bundle-logo.svg" alt="Humble Bundle logo" class="logo">
+                            <img src="/img/humble-bundle-logo.svg" alt="Humble Bundle logo" class="logo hidden">
                         </a>
                         <a href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer">
                             <img src="/img/steam-logo.svg" alt="Steam logo" class="logo">
@@ -24,10 +24,19 @@
                 <div class="navigation__right hidden-for-mobile">
                     <a href="#fop" class="text-2xl">Field Operative Program</a>
                 </div>
-                <div class="navigation__hamburger hidden-for-desktop" x-data="{ open: false }" @click="open = true">
-                    <img src="/img/hamburger.svg" alt="Mobile menu icon" class="hamburger">
-                    <div class="navigation__menu" x-show="open" @click.away="open = false">
-                        Hello!
+                <div class="navigation__mobile hidden-for-desktop" x-data="{ open: false }">
+                    <button @click="open = !open" class="flex-col center">
+                        <img src="/img/hamburger.svg" alt="Mobile menu icon" class="hamburger" x-show="close">
+                    </button>
+                    <div class="navigation__overlay" x-show="open" @click.away="open = false">
+                        <button @click="open = !open" class="flex-col center">
+                            <img src="/img/x.svg" alt="Mobile menu close icon" class="close" x-show="open">
+                        </button>
+                        <div class="navigation__menu"> 
+                            <a href="/" class="text-4xl">Home</a>
+                            <a href="/devlog" class="text-4xl">Devlog</a>
+                            <a href="/press-kit" class="text-4xl">Press Kit</a>
+                        </div>
                     </div>
                 </div>
             </div>

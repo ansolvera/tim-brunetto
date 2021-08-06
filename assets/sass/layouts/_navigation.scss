@@ -20,7 +20,7 @@ header {
         cursor: pointer;
     }
 
-    .hamburger {
+    .hamburger, .close {
         height: 2rem;
         width: 2rem;
     }
@@ -32,5 +32,44 @@ header {
 }
 
 .nav-logo {
-    width: auto; height: 12rem;
+    width: auto; height: 10rem;
+
+    @include breakpointsUp(medium) {
+        height: 12rem;
+    }
+
+    @include breakpointsUp(large) {
+        height: 18rem;
+    }
+    
+}
+
+.navigation__overlay {
+    position: fixed;
+    z-index: 950;
+    top: 0; right: 0; bottom: 0; left: 0;
+    display: grid;
+    place-items: center;
+    width: 100vw; height: 100vh;
+    background-color: rgba(24, 24, 24, 0.85);
+    backdrop-filter: blur(4px) saturate(110%);
+
+    button {
+        position: absolute;
+        top: 0; right: 0;
+        margin: 2.5rem;
+    }
+
+}
+
+.navigation__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        margin: 2.5rem 0;
+    }
+
 }

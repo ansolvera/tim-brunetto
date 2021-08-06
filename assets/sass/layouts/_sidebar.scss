@@ -19,6 +19,12 @@
 .sidebar {
     width: 100%;
     @include flexRow(center, center);
+
+    .hamburger, .close {
+        height: 2rem;
+        width: 2rem;
+    }
+
 }
 
 .sidebar__menu {

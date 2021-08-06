@@ -5,8 +5,8 @@
         <div class="container h-full">
             <div class="flex-col end h-full">
                 <div class="hero__wrapper">
-                    <a href="https://discord.com" class="hero__discord shadow-xl">
-                        <img src="/img/discord-logo.svg" alt="Discord logo" class="logo mr-16">
+                    <a href="https://discord.com" target="_blank" class="hero__discord shadow-xl">
+                        <img src="/img/discord-logo.svg" alt="Discord logo" class="logo mr-32">
                         <p class="text-4xl">Join our <br/> Discord</p>
                     </a>
                     <a href="#fop" class="hero__fop shadow-xl">
@@ -25,11 +25,11 @@
             </div>
             <div id="feature1" class="grid-cols-2 reversed gap-60 mb-80">
                 <div class="features__left">
-                    <h3 class="text-4xl mb-40 underline-blue">Unravel the horrific truth behind Ko'Verest Island</h3>
+                    <h3 class="text-4xl mb-40 underline-left">Unravel the horrific truth behind Ko'Verest Island</h3>
                     <p class="text-2xl">Across the islands luscious landscape lies an expansive network of abandoned buildings. You have been sent in to investigate the island as well as the disappearance of Delta squad. As the fierce combat operative Mike Ludwig, it is up to you to uncover the tragic events that took place and to conquer its evils.</p>
                 </div>
                 <div class="features__image">
-                    <img src="/img/island.webp" alt="An image of Ko'Verest Island">
+                    <img src="/img/cave.webp" alt="An image of a man standing in a cave.">
                 </div>
             </div>
             <div id="feature2" class="grid-cols-2 gap-60 mb-80">
@@ -37,7 +37,7 @@
                     <img src="/img/scope.webp" alt="An image of a dinosaur viewed through a scope.">
                 </div>
                 <div class="features__right">
-                    <h3 class="text-4xl mb-40 underline-blue">Unleash Your Arsenal</h3>
+                    <h3 class="text-4xl mb-40 underline-left">Unleash Your Arsenal</h3>
                     <p class="text-2xl mb-20">Creatures Of War is a challenging 2D action-horror game. Monstrosities big and small are going to want a piece of you. Upgrade your guns, healing flask, and equip your grenades, its times to find Delta squad.</p>
                     <ul>
                         <li class="text-xl mb-10">Intense action accompanied by the chilling threat of a brutal death lurking around every corner.</li>
@@ -48,12 +48,12 @@
             </div>
             <div id="feature3" class="grid-cols-2 reversed gap-60 mb-80">
                 <div class="features__left">
-                    <h3 class="text-4xl mb-40 underline-blue">Breathtaking Hand-Drawn Art</h3>
+                    <h3 class="text-4xl mb-40 underline-left">Breathtaking Hand-Drawn Art</h3>
                     <p class="text-2xl mb-10">Creatures Of War is given life in strikingly grisly detail, the island is brought to life with prehistoric and terrifying creatures, all animated to masterful perfection.</p>
                     <p class="text-2xl">Every biome that you'll visit is ruggedly unique and tough, bursting with new creatures and secrets to uncover. But Be Warned: Some secrets are better off left alone.</p>
                 </div>
                 <div class="features__image">
-                    <img src="/img/cave.webp" alt="An image of a man standing in a cave.">
+                    <img src="/img/island.webp" alt="An image of Ko'Verest Island">
                 </div>
             </div>
             <div id="feature4" class="grid-cols-2 gap-60">
@@ -61,7 +61,7 @@
                     <img src="/img/weapons.webp" alt="An image of guns on a table.">
                 </div>
                 <div class="features__right">
-                    <h3 class="text-4xl mb-40 underline-blue">Diversify Your Weapon Collection</h3>
+                    <h3 class="text-4xl mb-40 underline-left">Diversify Your Weapon Collection</h3>
                     <p class="text-2xl">There are many different types of guns in Creatures Of War. Guns that will fit into nearly any playstyle. If you prefer to kill from a distance, equip a bolt action rifle, feel the need to get up close and personal? The shotgun has you covered. Each weapon type will have distinct characteristics from its peers of the same weapon subclass, each gun is unique, no choice is wrong.</p>
                 </div>
             </div>
@@ -97,7 +97,7 @@
         <div class="container">
             <h2 class="text-5xl text-center mb-40">Mike Ludwig</h2>
             <img src="/img/mike-ludwig.webp" alt="/" class="mb-20">
-            <p class="text-center">Charlie teams tactical expert, he is trained to deliver results in the most extreme circumstances. Proficient with all types of firearms, Mike is very resourceful and if need be is not afraid to run away from a losing conflict. He was assigned this mission for a reason, he can get the job done.</p>
+            <p class="ludwig__copy text-xl text-center">Charlie teams tactical expert, he is trained to deliver results in the most extreme circumstances. Proficient with all types of firearms, Mike is very resourceful and if need be is not afraid to run away from a losing conflict. He was assigned this mission for a reason, he can get the job done.</p>
         </div>
     </section>
 
@@ -134,36 +134,36 @@
                     </a>
                     <a href="#" :class="{ 'active': tab === 'procompsognathus' }" @click.prevent="tab = 'spider'">
                         <div class="tabs__spider mb-10"></div>
-                        <p class="text-center">Gigantus Wandering Spitting Spider</p>
+                        <p class="text-center">Gigantus</p>
                     </a>
                 </nav>
                 <div class="tabs__content" x-show="tab === 'amargonyx'">
                     <img src="/img/amargonyx.webp" alt="" class="mb-40">
-                    <p class="text-center">The Amargonyx is the result of genetic tampering between an Allosaurus and a Titanosaur. The alarming size of this creature makes their hides extremely thick, making them all the harder to kill. They are very ill tempered creatures and will hunt their prey to the death after being provoked. Their long necks allow for crushing blows to take place from unsuspecting distances.</p>
+                    <p class="text-xl text-center">The Amargonyx is the result of genetic tampering between an Allosaurus and a Titanosaur. The alarming size of this creature makes their hides extremely thick, making them all the harder to kill. They are very ill tempered creatures and will hunt their prey to the death after being provoked. Their long necks allow for crushing blows to take place from unsuspecting distances.</p>
                 </div>
                 <div class="tabs__content text-center" x-show="tab === 't-rex'">
                     <img src="/img/trex.webp" alt="" class="mb-40">
-                    <p class="text-center">The biggest and baddest dinosaur on the island, at least at first. The T-Rex is the epitome of power and death. One swift bite is capable of ripping its victims to shreds. The typical reaction is to run, but recent testing has shown that the T-Rex can vastly outrun any human. It is highly advisable to proceed with caution if a T-Rex is thought to be in the area.</p>
+                    <p class="text-xl text-center">The biggest and baddest dinosaur on the island, at least at first. The T-Rex is the epitome of power and death. One swift bite is capable of ripping its victims to shreds. The typical reaction is to run, but recent testing has shown that the T-Rex can vastly outrun any human. It is highly advisable to proceed with caution if a T-Rex is thought to be in the area.</p>
                 </div>
                 <div class="tabs__content text-center" x-show="tab === 'bulletwolf'">
                     <img src="/img/bulletwolf.webp" alt="" class="mb-40">
-                    <p class="text-center">The Bulletwolf Ant Queen has only been known to inhabit the deepest and warmest chambers of their bulletwolf ant farms. They lay eggs at an alarming rate and have voracious appetites that never slow down. The worst part about them is they don't do the hunting and their combat capabilities are largely unknown.</p>
+                    <p class="text-xl text-center">The Bulletwolf Ant Queen has only been known to inhabit the deepest and warmest chambers of their bulletwolf ant farms. They lay eggs at an alarming rate and have voracious appetites that never slow down. The worst part about them is they don't do the hunting and their combat capabilities are largely unknown.</p>
                 </div>
                 <div class="tabs__content text-center" x-show="tab === 'utah'">
                     <img src="/img/utah.webp" alt="" class="mb-40">
-                    <p class="text-center">The Utah Raptor is the velociraptor's big older brother, as they are taller, heftier, and wield longer claws. These factors alone make this an intimidating foe all by themselves, but of course the Utah Raptor happens to be a pack hunter.</p>
+                    <p class="text-xl text-center">The Utah Raptor is the velociraptor's big older brother, as they are taller, heftier, and wield longer claws. These factors alone make this an intimidating foe all by themselves, but of course the Utah Raptor happens to be a pack hunter.</p>
                 </div>
                 <div class="tabs__content text-center" x-show="tab === 'hornoraptor'">
                     <img src="/img/hornoraptor.webp" alt="" class="mb-40">
-                    <p class="text-center">Death from above and below. The Giant Asian Hornoraptor delivers a sting equally painful as it is poisonous. The victims are consumed on site. Long claws, viscious teeth, and that harrowing sound when one is flying in the air will send chills down your spine.</p>
+                    <p class="text-xl text-center">Death from above and below. The Giant Asian Hornoraptor delivers a sting equally painful as it is poisonous. The victims are consumed on site. Long claws, viscious teeth, and that harrowing sound when one is flying in the air will send chills down your spine.</p>
                 </div>
                 <div class="tabs__content text-center" x-show="tab === 'procompsognathus'">
                     <img src="/img/procompsognathus.webp" alt="" class="mb-40">
-                    <p class="text-center">Quick and small, pack hunter, slightly venomous, and surprisingly aggressive. The procompsognathus does not have the hides or the offensive capabilities of other creatures on Ko'Vorest island, but what it lacks in lethality is made up in numbers. If you encounter one of these creatures, expect the entire family.</p>
+                    <p class="text-xl text-center">Quick and small, pack hunter, slightly venomous, and surprisingly aggressive. The procompsognathus does not have the hides or the offensive capabilities of other creatures on Ko'Vorest island, but what it lacks in lethality is made up in numbers. If you encounter one of these creatures, expect the entire family.</p>
                 </div>
                 <div class="tabs__content text-center" x-show="tab === 'spider'">
                     <img src="/img/spider.webp" alt="" class="mb-40">
-                    <p class="text-center">The Gigantus Wandering Spitting Spider has been genetically engineered from two genus of arachnids to create the ultimate spider. Crippling poison, engulfing webs shot from distance, and a fang size that can serrate any flesh it encounters briefly describes this creature's terrifying capabilities.</p>
+                    <p class="text-xl text-center">The Gigantus Wandering Spitting Spider has been genetically engineered from two genus of arachnids to create the ultimate spider. Crippling poison, engulfing webs shot from distance, and a fang size that can serrate any flesh it encounters briefly describes this creature's terrifying capabilities.</p>
                 </div>
             </div>
         </div>
@@ -195,8 +195,8 @@
     <section id="wishlist" class="section py-120">
         <div class="container">
             <h2 class="text-5xl text-center mb-40">Wishlist Here!</h2>
-            <div class="wishlist__wrapper">
-                <a href="/" class="wishlist__col text-center">
+            <div class="wishlist__wrapper flex-row center">
+                <a href="/" class="wishlist__col text-center hidden">
                     <h3 class="text-3xl mb-40">Epic Games Store</h3>
                     <img src="/img/epic-games-logo.svg" alt="Epic Games logo" class="logo">
                 </a>
@@ -204,7 +204,7 @@
                     <h3 class="text-3xl mb-40">Steam</h3>
                     <img src="/img/steam-logo.svg" alt="Steam logo" class="logo">
                 </a>
-                <a href="/" class="wishlist__col text-center">
+                <a href="/" class="wishlist__col text-center hidden">
                     <h3 class="text-3xl mb-40">Humble-Bundle</h3>
                     <img src="/img/humble-bundle-logo.svg" alt="Humble Bundle logo" class="logo">
                 </a>
@@ -247,7 +247,7 @@
                     </div>
                 </div>
                 {{ end }}
-                <div class="devlog__recent flex-row between">
+                <div class="devlog__recent">
                     {{ range first 4 ( where ( where .Site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "=" false) }}
                     <div class="devlog__recent__post">
                         {{ with .Params.image }}
@@ -272,8 +272,8 @@
         <div class="container">
             <h2 class="text-4xl text-center mb-20">Creatures Of War</h2>
             <p class="text-base text-center mb-40">Available on</p>
-            <div class="info__wrapper mb-80">
-                <a href="/" class="info__col text-center">
+            <div class="info__wrapper flex-row center mb-80">
+                <a href="/" class="info__col text-center hidden">
                     <h3 class="text-xl mb-40">Epic Games Store</h3>
                     <img src="/img/epic-games-logo.svg" alt="Epic Games logo" class="logo">
                 </a>
@@ -281,7 +281,7 @@
                     <h3 class="text-xl mb-40">Steam</h3>
                     <img src="/img/steam-logo.svg" alt="Steam logo" class="logo">
                 </a>
-                <a href="/" class="info__col text-center">
+                <a href="/" class="info__col text-center hidden">
                     <h3 class="text-xl mb-40">Humble-Bundle</h3>
                     <img src="/img/humble-bundle-logo.svg" alt="Humble Bundle logo" class="logo">
                 </a>
