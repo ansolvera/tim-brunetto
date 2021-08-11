@@ -172,13 +172,28 @@
 // ********************
 
 .gap-30 {
-    gap: 1.875rem;
+    gap: 1rem;
+
+    @include breakpointsUp(large) {
+        gap: 1.875rem;
+    }
+
 }
 
 .gap-60 {
-    gap: 3.75rem;
+    gap: 1.875rem;
+
+    @include breakpointsUp(large) {
+        gap: 3.75rem;
+    }
+
 }
 
 .gap-120 {
-    gap: 7.5rem;
+    gap: 3.75rem;
+
+    @include breakpointsUp(large) {
+        gap: 7.5rem;
+    }
+
 }

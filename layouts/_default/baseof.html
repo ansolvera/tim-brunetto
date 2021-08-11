@@ -3,7 +3,7 @@
 
 {{ partial "head.html" . }}
 
-<body>
+<body class="body">
     {{ if eq .Params.type "list" }}
         {{ partial "navigation-list.html" . }}
     {{ else if eq .Params.layout "press" }}
@@ -12,7 +12,7 @@
         {{ partial "navigation.html" . }}
     {{ end }}
 
-    <main aria-roledescription="main">
+    <main aria-roledescription="main" class="main">
         {{ block "main" . }} {{ end }}
     </main>
 
