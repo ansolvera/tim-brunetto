@@ -788,6 +788,9 @@ body {
 #modal .modal__bottom {
   padding: 2.5rem;
 }
+#modal a {
+  color: #3176AA;
+}
 
 #close {
   display: grid;
@@ -939,6 +942,21 @@ body {
   background-blend-mode: overlay;
   border-top: 1px solid #fff;
 }
+#fop a {
+  color: #3176AA;
+}
+
+#fop-anchor {
+  display: block;
+  position: absolute;
+  top: -25vh;
+  right: 0;
+  left: 0;
+  width: auto;
+  height: 25vh;
+  visibility: hidden;
+  pointer-events: none;
+}
 
 .fop__wrapper {
   display: flex;
@@ -1015,7 +1033,7 @@ input[type=email] {
   transition: all 0.3s;
 }
 .wishlist__col:hover {
-  opacity: 0.9;
+  opacity: 0.65;
   color: unset;
 }
 .wishlist__col .logo {
@@ -1096,7 +1114,7 @@ input[type=email] {
   transition: all 0.3s;
 }
 .info__col:hover {
-  opacity: 0.9;
+  opacity: 0.65;
   color: unset;
 }
 .info__col .logo {
@@ -1117,11 +1135,18 @@ input[type=email] {
 }
 
 .tabs__navigation {
-  flex-wrap: wrap;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+}
+@media (min-width: 48rem) {
+  .tabs__navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 .tabs__navigation > a {
   display: flex;
@@ -1134,7 +1159,7 @@ input[type=email] {
 }
 
 .tabs__content {
-  max-height: 41.875rem;
+  height: 41.875rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1268,6 +1293,12 @@ input[type=email] {
   justify-content: center;
   align-items: center;
 }
+.features__image img {
+  transition: transform 0.3s;
+}
+.features__image:hover img {
+  transform: scale(1.25);
+}
 
 .content__wrapper {
   max-width: 65ch;
@@ -1310,6 +1341,10 @@ hr {
 .navigation .logo {
   margin-left: 1.25rem;
   height: 2rem;
+  transition: opacity 0.3s;
+}
+.navigation .logo:hover {
+  opacity: 0.65;
 }
 .navigation .navigation__brand {
   flex-shrink: 0;
@@ -1331,17 +1366,17 @@ hr {
 
 .nav-logo {
   width: auto;
-  height: 10rem;
+  height: 2.5rem;
   flex-shrink: 0;
 }
 @media (min-width: 48rem) {
   .nav-logo {
-    height: 10.5rem;
+    height: 2.5rem;
   }
 }
 @media (min-width: 64rem) {
   .nav-logo {
-    height: 14rem;
+    height: 4rem;
   }
 }
 

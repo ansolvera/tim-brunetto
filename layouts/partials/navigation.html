@@ -22,7 +22,7 @@
                     </a>
                 </div>
                 <div class="navigation__right hidden-for-mobile">
-                    <a href="#fop" class="nav-text">Field Operative Program</a>
+                    <a href="#fop-anchor" class="nav-text">Field Operative Program</a>
                 </div>
                 <div class="navigation__mobile hidden-for-desktop" x-data="{ open: false }">
                     <button @click="open = !open" class="flex-col center">
@@ -33,9 +33,12 @@
                             <img src="/img/x.svg" alt="Mobile menu close icon" class="close" x-show="open">
                         </button>
                         <div class="navigation__menu"> 
-                            <a href="/" class="text-4xl">Home</a>
-                            <a href="/devlog" class="text-4xl">Devlog</a>
-                            <a href="/press-kit" class="text-4xl">Press Kit</a>
+                            <a href="#features" class="text-4xl">Dive Into the Unknown</a>
+                            <a href="#values" class="text-4xl">Core Values</a>
+                            <a href="#ludwig" class="text-4xl">Mike Ludwig</a>
+                            <a href="#tabs" class="text-4xl">Bio-Organic Weapons</a>
+                            <a href="#fop" class="text-4xl">Field Operative Program</a>
+                            <a href="#info" class="text-4xl">Wishlist on Steam</a>
                         </div>
                     </div>
                 </div>

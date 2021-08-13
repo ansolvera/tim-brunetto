@@ -11,6 +11,12 @@
     .logo {
         margin-left: 1.25rem;
         height: 2rem;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.65;
+        }
+
     }
 
     .navigation__brand {
@@ -38,15 +44,15 @@
 }
 
 .nav-logo {
-    width: auto; height: 10rem;
+    width: auto; height: 2.5rem;
     flex-shrink: 0;
 
     @include breakpointsUp(medium) {
-        height: 10.5rem;
+        height: 2.5rem;
     }
 
     @include breakpointsUp(large) {
-        height: 14rem;
+        height: 4rem;
     }
     
 }

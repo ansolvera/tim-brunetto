@@ -107,6 +107,20 @@
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     border-top: 1px solid #fff;
+
+    a {
+        color: $blue-400;
+    }
+
+}
+
+#fop-anchor {
+    display: block;
+    position: absolute;
+    top: -25vh; right: 0; left: 0;
+    width: auto; height: 25vh;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .fop__wrapper {
@@ -182,7 +196,7 @@ input[type="email"] {
     transition: all 0.3s;
 
     &:hover {
-        opacity: 0.9;
+        opacity: 0.65;
         color: unset;
     }
     
@@ -230,7 +244,7 @@ input[type="email"] {
     transition: all 0.3s;
 
     &:hover {
-        opacity: 0.9;
+        opacity: 0.65;
         color: unset;
     }
 
@@ -254,8 +268,17 @@ input[type="email"] {
 }
 
 .tabs__navigation {
-    flex-wrap: wrap;
-    @include flexRow(center, center);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+
+    @include breakpointsUp(medium) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 
     > a {
         display: flex;
@@ -270,7 +293,7 @@ input[type="email"] {
 }
 
 .tabs__content {
-    max-height: 41.875rem;
+    height: 41.875rem;
 
     @include flexColumn(center, center);
 
@@ -424,4 +447,15 @@ input[type="email"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    img {
+        transition: transform 0.3s;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.25);
+        }
+    }
+
 }
