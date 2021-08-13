@@ -15,10 +15,15 @@
     background-image: url('/img/cover-image.webp');
     background-color: #333;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: left center;
     background-size: cover;
     background-attachment: fixed;
     background-blend-mode: overlay;
+
+    @include breakpointsUp(medium) {
+        background-position: center center;
+    }
+
 }
 
 #hero, #values, #fop, #wishlist, #social, #devlog {
@@ -208,10 +213,15 @@ input[type="email"] {
 
 .wishlist__social__wrapper {
     background-image: url('/img/purussaurus.webp');
-    background-position: center center;
+    background-position: 30% center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    @include breakpointsUp(medium) {
+        background-position: center center;
+    }
+
 }
 
 .social-container {
@@ -436,10 +446,15 @@ input[type="email"] {
     background-image: url('/img/cover-image.webp');
     background-color: #333;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 70% center;
     background-size: cover;
     background-attachment: fixed;
     background-blend-mode: overlay;
+
+    @include breakpointsUp(medium) {
+        background-position: center center;
+    }
+
 }
 
 .features__image {

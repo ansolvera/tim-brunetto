@@ -836,10 +836,15 @@ body {
   background-image: url("/img/cover-image.webp");
   background-color: #333;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: left center;
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: overlay;
+}
+@media (min-width: 48rem) {
+  .hero__features__wrapper {
+    background-position: center center;
+  }
 }
 
 #hero, #values, #fop, #wishlist, #social, #devlog {
@@ -1042,10 +1047,15 @@ input[type=email] {
 
 .wishlist__social__wrapper {
   background-image: url("/img/purussaurus.webp");
-  background-position: center center;
+  background-position: 30% center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+@media (min-width: 48rem) {
+  .wishlist__social__wrapper {
+    background-position: center center;
+  }
 }
 
 .social-container {
@@ -1281,10 +1291,15 @@ input[type=email] {
   background-image: url("/img/cover-image.webp");
   background-color: #333;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 70% center;
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: overlay;
+}
+@media (min-width: 48rem) {
+  .devlog__info__wrapper {
+    background-position: center center;
+  }
 }
 
 .features__image {
@@ -1376,7 +1391,7 @@ hr {
 }
 @media (min-width: 64rem) {
   .nav-logo {
-    height: 4rem;
+    height: 3rem;
   }
 }
 
