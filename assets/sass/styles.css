@@ -1005,7 +1005,7 @@ body {
   }
 }
 
-.fop__form {
+.sib-input__wrapper {
   width: 100%;
   max-width: 35.625rem;
   margin-left: auto;
@@ -1014,12 +1014,25 @@ body {
   background-color: #000000;
 }
 @media (min-width: 64rem) {
-  .fop__form {
+  .sib-input__wrapper {
     margin-left: unset;
   }
 }
 
-input[type=email] {
+.sib-form-block__button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #fff;
+  font-size: 1.25rem;
+  text-align: center;
+  transition: color 0.3s;
+}
+.sib-form-block__button:hover {
+  color: #7D0100;
+}
+
+input[type=email], input[type=text] {
   width: 100%;
   height: 3rem;
   background-color: #000000;
@@ -1313,6 +1326,30 @@ input[type=email] {
 }
 .features__image:hover img {
   transform: scale(1.25);
+}
+
+#success-message, #error-message, #success-message--modal, #error-message--modal {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+#success-message.is-shown, #error-message.is-shown, #success-message--modal.is-shown, #error-message--modal.is-shown {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+#success-message, #success-message--modal {
+  color: green;
+}
+
+#error-message, #error-message--modal {
+  color: red;
+}
+
+.input--hidden {
+  display: none;
 }
 
 .content__wrapper {
