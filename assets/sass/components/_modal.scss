@@ -10,19 +10,32 @@
     transform: translateX(-50vw);
     opacity: 0.5;
     visibility: hidden;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     @include flexColumn(center, center);
 
     @include breakpointsUp(medium) {
         left: unset;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
     }
 
-    > * {
-        height: 50%;
-        width: 100%;
+    @include breakpointsUp(medium) {
+
+        > * {
+            height: 50%;
+            width: 100%;
+        }
+
     }
 
     .modal__bottom {
-        padding: 2.5rem;
+        padding: 1.25rem;
+
+        @include breakpointsUp(medium) {
+            padding: 2.5rem;
+        }
+
     }
 
     a {

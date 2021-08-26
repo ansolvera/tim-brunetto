@@ -22,15 +22,30 @@
     position: relative;
 
     &.py-80 {
-        padding: 5rem 0;
+        padding: 2.5rem 0;
+
+        @include breakpointsUp(medium) {
+            padding: 5rem 0;
+        }
+
     }
 
     &.py-120 {
-        padding: 7.5rem 0;
+        padding: 3.75rem 0;
+
+        @include breakpointsUp(medium) {
+            padding: 7.5rem 0;
+        }
+
     }
 
     &.py-160 {
-        padding: 10rem 0;
+        padding: 5rem 0;
+
+        @include breakpointsUp(medium) {
+            padding: 10rem 0;
+        }
+
     }
 
 }

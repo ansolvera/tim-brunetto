@@ -55,7 +55,7 @@ document.querySelector('#sib-form').addEventListener('submit', () => {
 
 })
 
-document.querySelector('#sib-form--modal').addEventListener('submit', () => {
+modal.addEventListener('submit', () => {
     let xhr = new XMLHttpRequest();
 
     xhr.open('POST', 'https://c23ef8a2.sibforms.com/serve/MUIEAH0VpauvuLzv9DvebiNNmcFnbMuHYabHk3EC0Y2Le5J5Lr160C3MHWvSgZUiNukCOjbxUOg5AkuJ1WUv2KhYdb2A3N9ycAax5slE74GgbQn_iYcGVWnSkhvNQNaZyz5UFZ0Lpow82tPLTIl3EiTVKJcehGOjA-vKMEomNFY8FKj-SNXir83YZTNJ5QAEJYk5JD2a9eJGO_w4', true)
@@ -66,6 +66,9 @@ document.querySelector('#sib-form--modal').addEventListener('submit', () => {
 
         if(xhr.status == 200) {
             modalSuccess.classList.add('is-shown')
+            setTimeout(() => {
+                modal.remove();
+            }, 5000);
         } else {
             modalError.classList.add('is-shown')
         } return false;
