@@ -278,11 +278,11 @@ input[type="email"], input[type="text"] {
 }
 
 .circle-container {
-    @include on-circle($item-count: 8, $circle-size: 60rem, $item-size: 6rem);
+    @include on-circle($item-count: 6, $circle-size: 50rem, $item-size: 6rem);
     margin: 5rem auto 0;
     background-image: url('/img/blood-splatter.webp');
     background-position: center center;
-    background-size: 85%;
+    background-size: 75%;
     background-repeat: no-repeat;
 
     img {
