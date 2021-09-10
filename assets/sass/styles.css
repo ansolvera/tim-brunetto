@@ -837,7 +837,8 @@ body {
 }
 
 #hero {
-  height: 67.5rem;
+  padding-top: 25rem;
+  padding-bottom: 5rem;
   background-color: #181818;
 }
 #hero::before {
@@ -850,8 +851,8 @@ body {
   min-height: 30rem;
   background-image: url("/img/lift.webp");
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-position: top center;
+  background-size: contain;
 }
 @media (min-width: 48rem) {
   #hero::before {
@@ -860,6 +861,8 @@ body {
 }
 @media (min-width: 48rem) {
   #hero {
+    padding-top: 50rem;
+    padding-bottom: 10rem;
     background-image: unset;
     background-color: unset;
   }
@@ -1121,47 +1124,94 @@ input[type=email], input[type=text] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 1rem;
+  max-width: 6rem;
+  text-align: center;
+}
+@media (min-width: 48rem) {
+  .social__copy {
+    font-size: 1.25rem;
+    max-width: 12rem;
+  }
 }
 
 .circle-container {
+  background-image: url("/img/blood-splatter.webp");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center center;
+  margin: 0 auto;
   position: relative;
-  width: 50rem;
-  height: 50rem;
+  width: 25rem;
+  height: 25rem;
   padding: 0;
   border-radius: 50%;
   list-style: none;
-  margin: 5rem auto 0;
-  background-image: url("/img/blood-splatter.webp");
-  background-position: center center;
-  background-size: 75%;
-  background-repeat: no-repeat;
 }
 .circle-container > * {
   display: block;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 6rem;
-  height: 6rem;
-  margin: -3rem;
+  width: 3rem;
+  height: 3rem;
+  margin: -1.5rem;
 }
 .circle-container > *:nth-of-type(1) {
-  transform: rotate(30deg) translate(25rem) rotate(-30deg);
+  transform: rotate(30deg) translate(12.5rem) rotate(-30deg);
 }
 .circle-container > *:nth-of-type(2) {
-  transform: rotate(90deg) translate(25rem) rotate(-90deg);
+  transform: rotate(90deg) translate(12.5rem) rotate(-90deg);
 }
 .circle-container > *:nth-of-type(3) {
-  transform: rotate(150deg) translate(25rem) rotate(-150deg);
+  transform: rotate(150deg) translate(12.5rem) rotate(-150deg);
 }
 .circle-container > *:nth-of-type(4) {
-  transform: rotate(210deg) translate(25rem) rotate(-210deg);
+  transform: rotate(210deg) translate(12.5rem) rotate(-210deg);
 }
 .circle-container > *:nth-of-type(5) {
-  transform: rotate(270deg) translate(25rem) rotate(-270deg);
+  transform: rotate(270deg) translate(12.5rem) rotate(-270deg);
 }
 .circle-container > *:nth-of-type(6) {
-  transform: rotate(330deg) translate(25rem) rotate(-330deg);
+  transform: rotate(330deg) translate(12.5rem) rotate(-330deg);
+}
+@media (min-width: 48rem) {
+  .circle-container {
+    background-size: 75%;
+    position: relative;
+    width: 40rem;
+    height: 40rem;
+    padding: 0;
+    border-radius: 50%;
+    list-style: none;
+  }
+  .circle-container > * {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6rem;
+    height: 6rem;
+    margin: -3rem;
+  }
+  .circle-container > *:nth-of-type(1) {
+    transform: rotate(30deg) translate(20rem) rotate(-30deg);
+  }
+  .circle-container > *:nth-of-type(2) {
+    transform: rotate(90deg) translate(20rem) rotate(-90deg);
+  }
+  .circle-container > *:nth-of-type(3) {
+    transform: rotate(150deg) translate(20rem) rotate(-150deg);
+  }
+  .circle-container > *:nth-of-type(4) {
+    transform: rotate(210deg) translate(20rem) rotate(-210deg);
+  }
+  .circle-container > *:nth-of-type(5) {
+    transform: rotate(270deg) translate(20rem) rotate(-270deg);
+  }
+  .circle-container > *:nth-of-type(6) {
+    transform: rotate(330deg) translate(20rem) rotate(-330deg);
+  }
 }
 .circle-container img {
   display: block;
@@ -1222,7 +1272,7 @@ input[type=email], input[type=text] {
 }
 
 .tabs__content {
-  height: 41.875rem;
+  height: 37.5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1445,6 +1495,28 @@ input[type=email], input[type=text] {
   #privacy-hero {
     padding-top: 15rem;
     padding-bottom: 7.5rem;
+  }
+}
+
+#fop__submit {
+  width: 100%;
+}
+
+.features__image--cave {
+  display: block;
+}
+@media (min-width: 48rem) {
+  .features__image--cave {
+    display: none;
+  }
+}
+
+.features__image--lift {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .features__image--lift {
+    display: block;
   }
 }
 

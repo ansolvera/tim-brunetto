@@ -3,7 +3,8 @@
 }
 
 #hero {
-    height: 67.5rem;
+    padding-top: 25rem;
+    padding-bottom: 5rem;
     background-color: $gray-900;
 
     &::before {
@@ -13,8 +14,8 @@
         width: 100%; min-height: 30rem;
         background-image: url('/img/lift.webp');
         background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
+        background-position: top center;
+        background-size: contain;
 
         @include breakpointsUp(medium) {
             display: none;
@@ -23,6 +24,8 @@
     }
 
     @include breakpointsUp(medium) {
+        padding-top: 50rem;
+        padding-bottom: 10rem;
         background-image: unset;
         background-color: unset;
     }
@@ -274,16 +277,31 @@ input[type="email"], input[type="text"] {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 1rem;
+    max-width: 6rem;
+    text-align: center;
+
+    @include breakpointsUp(medium) {
+        font-size: 1.25rem;
+        max-width: 12rem;
+    }
 
 }
 
 .circle-container {
-    @include on-circle($item-count: 6, $circle-size: 50rem, $item-size: 6rem);
-    margin: 5rem auto 0;
     background-image: url('/img/blood-splatter.webp');
-    background-position: center center;
-    background-size: 75%;
     background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center center;
+    margin: 0 auto;
+
+    @include on-circle($item-count: 6, $circle-size: 25rem, $item-size: 3rem);
+
+    @include breakpointsUp(medium) {
+        background-size: 75%;
+
+        @include on-circle($item-count: 6, $circle-size: 40rem, $item-size: 6rem);
+    }
 
     img {
         display: block;
@@ -354,7 +372,7 @@ input[type="email"], input[type="text"] {
 }
 
 .tabs__content {
-    height: 41.875rem;
+    height: 37.5rem;
 
     @include flexColumn(flex-start, center);
 
@@ -603,6 +621,28 @@ input[type="email"], input[type="text"] {
     @include breakpointsUp(medium) {
         padding-top: 15rem;
         padding-bottom: 7.5rem;
+    }
+
+}
+
+#fop__submit {
+    width: 100%;
+}
+
+.features__image--cave {
+    display: block;
+
+    @include breakpointsUp(medium) {
+        display: none;
+    }
+
+}
+
+.features__image--lift {
+    display: none;
+
+    @include breakpointsUp(medium) {
+        display: block;
     }
 
 }
