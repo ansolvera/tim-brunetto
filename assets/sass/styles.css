@@ -848,11 +848,13 @@ body {
   right: 0;
   left: 0;
   width: 100%;
-  min-height: 30rem;
-  background-image: url("/img/lift.webp");
+  min-height: 20rem;
+  background-color: #333333;
+  background-image: url("/img/cover-image.webp");
   background-repeat: no-repeat;
-  background-position: top center;
-  background-size: contain;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 @media (min-width: 48rem) {
   #hero::before {
@@ -1443,17 +1445,17 @@ input[type=email], input[type=text] {
   display: none;
 }
 
-.tabs__img--amargonyx, .tabs__img--t-rex, .tabs__img--bulletwolf, .tabs__img--utah, .tabs__img--hornoraptor, .tabs__img--procompsognathus, .tabs__img--spider {
+.tabs__img--amargonyx, .tabs__img--trex, .tabs__img--bulletwolf, .tabs__img--utah, .tabs__img--hornoraptor, .tabs__img--procompsognathus, .tabs__img--spider {
   width: 100%;
-  height: 18.75rem;
-  background-size: cover;
+  min-height: 18.75rem;
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 @media (min-width: 48rem) {
-  .tabs__img--amargonyx, .tabs__img--t-rex, .tabs__img--bulletwolf, .tabs__img--utah, .tabs__img--hornoraptor, .tabs__img--procompsognathus, .tabs__img--spider {
-    height: 30rem;
+  .tabs__img--amargonyx, .tabs__img--trex, .tabs__img--bulletwolf, .tabs__img--utah, .tabs__img--hornoraptor, .tabs__img--procompsognathus, .tabs__img--spider {
+    min-height: 30rem;
   }
 }
 
